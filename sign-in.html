@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in Page</title>
+</head>
+<body>
+    <h1>Sign-in Form</h1>
+    <form>
+        <div>
+            <label for="username">Username :</label> <br>
+            <input type="text" name="usernameText">
+        </div>
+        <div>
+            <label for="password">Password :</label> <br>
+            <input type="text" name="passwordText">
+        </div>
+        <div>
+            <input type="submit" value="Sign in">
+        </div>
+    </form>
+
+    <script>
+        const form = document.querySelector("form")
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const userData = new FormData(form);
+            const object = Object.fromEntries(userData);
+            const json = JSON.stringify(object);
+
+            /*
+            Data in localStorage is saved across browser sessions,
+            which I assume means refreshing/closing the tab does not remove it.
+            If we want the data to be reset, then we use sessionStorage.
+
+            Attributes of localStorage
+                .setItem(key, value) writes a key-value into the storage
+                .getItem(key) returns the value assigned to that key
+                .removeItem(key) removes the key-value from the storage
+                .clear() removes all keys and values from the storage
+            */
+
+            localStorage.setItem("form", json);
+            console.log(localStorage.getItem("form"));
+        })
+    </script>
+
+</body>
+</html>
