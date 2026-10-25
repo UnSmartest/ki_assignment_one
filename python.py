@@ -1,6 +1,7 @@
 from pyscript import document
 
 #print() only displays in the console log
+#document.querySelector("idNameFromTheHTML")
 
 a = 7
 if(a == 7):
