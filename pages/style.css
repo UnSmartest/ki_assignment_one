@@ -82,7 +82,7 @@ form{
   font-size: 20px;
 }
 
-.forgot-link{
+.link{
   margin: 15px 0 15px;
   font-size: 14px;
   color: #333;
@@ -101,6 +101,12 @@ form{
   outline: none;
   border: none;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover{
+    background: #020045;
+    transform: translateY(-1px);
 }
 
 .container p {

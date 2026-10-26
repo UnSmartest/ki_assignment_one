@@ -1,36 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-up Page</title>
-</head>
-<body>
-    <h1>Sign-up Form</h1>
-    <form>
-        <div>
-            <label for="username">Username :</label> <br>
-            <input id="userText" type="text" name="usernameText" required>
-        </div>
-        <div>
-            <label for="password">Password :</label> <br>
-            <input id="pass1" type="text" name="passwordText" required>
-        </div>
-        <div>
-            <label for="confirmPassword">Confirm password :</label> <br>
-            <input id="pass2" type="text" name="confirmPasswordText" required>
-        </div>
-        <div>
-            <input type="submit" value="Sign in">
-        </div>
-    </form>
-    <div>
-        <br><a href="/sign-in">If you already signed up, CLICK ME!</a>
-        <br><a href="/test">Want to check if Python works here? CLICK ME!</a>
+    <link rel="stylesheet" href="style.css" />
+    <!-- this for icon-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box login">
+        <form>
+          <h1>Sign-in Form</h1>
+          <div class="input-box">
+            <!-- <label for="username">Username :</label> <br /> -->
+            <input
+              id="userText"
+              type="text"
+              name="usernameText"
+              required
+              placeholder="Username"
+            />
+          </div>
+          <div class="input-box">
+            <!-- <label for="password">Password :</label> <br /> -->
+            <input
+              id="pass1"
+              type="text"
+              name="passwordText"
+              required
+              placeholder="Password"
+            />
+          </div>
+          <div class="input-box">
+            <!-- <label for="confirmPassword">Confirm password :</label> <br /> -->
+            <input
+              id="pass2"
+              type="text"
+              name="confirmPasswordText"
+              required
+              placeholder="Confirm password"
+            />
+          </div>
+          <div>
+            <input type="submit" value="Sign in" class="btn" />
+          </div>
+          <div class="link">
+            <br /><a href="/sign-in">If you already signed up, CLICK ME!</a>
+            <br /><a href="/test">Want to check if Python works here? CLICK ME!</a>
+          </div>
+        </form>
+      </div>
+      <div class="img-box">
+        <img src="img/images.jpg" />
+      </div>
     </div>
 
     <script>
-        /* 
+      /* 
         I have a big problem. 
         Storing the user data in JSON format into a JSON file
         requires a function available to NodeJS but not browser JS.
@@ -39,53 +66,53 @@
         localStorage is not a thing in Node.js
         You cannot import. So, I guess we're just doing this the HTTP Req/Res way, huh.
         */
-        const form = document.querySelector("form");
+      const form = document.querySelector("form");
 
-        form.addEventListener("submit", async (e) => {
-            e.preventDefault();
-            
-            const userText = await document.getElementById("userText").value;
-            console.log("The 'userText' is ", userText);
-            const passText = await document.getElementById("pass1").value;
-            const confPassText = await document.getElementById("pass2").value;
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-            try {
-                const response = await fetch("/users", {
-                    method: "GET"
-                });
-                const result = await response.json();
-                
-                for(let i = 0 ; i < result.users.length ; i++){ //yes, this is an O(n) but who cares, we're not working with 32493247932 users
-                    if(result.users[i].usernameText === userText){
-                        alert("Username already exists!");
-                        return;
-                    }
-                }
-            } catch (error) {
-                console.log(error);
-                return;
+        const userText = await document.getElementById("userText").value;
+        console.log("The 'userText' is ", userText);
+        const passText = await document.getElementById("pass1").value;
+        const confPassText = await document.getElementById("pass2").value;
+
+        try {
+          const response = await fetch("/users", {
+            method: "GET",
+          });
+          const result = await response.json();
+
+          for (let i = 0; i < result.users.length; i++) {
+            //yes, this is an O(n) but who cares, we're not working with 32493247932 users
+            if (result.users[i].usernameText === userText) {
+              alert("Username already exists!");
+              return;
             }
+          }
+        } catch (error) {
+          console.log(error);
+          return;
+        }
 
-            console.log(passText, confPassText);
-            if(passText != confPassText){
-                alert("Values in 'Password' and 'Confirm password' do not match.");
-                return;
-            }
+        console.log(passText, confPassText);
+        if (passText != confPassText) {
+          alert("Values in 'Password' and 'Confirm password' do not match.");
+          return;
+        }
 
-            const userData = new FormData(form);
-            try {
-                const response = await fetch("/sign-up", {
-                    method: "POST",
-                    body: new URLSearchParams(userData)
-                });
-                const result = await response.text();
-                console.log(result);
-                window.location.replace("/document-upload");
-            } catch (error) {
-                console.error(error);
-            }
-        })
+        const userData = new FormData(form);
+        try {
+          const response = await fetch("/sign-up", {
+            method: "POST",
+            body: new URLSearchParams(userData),
+          });
+          const result = await response.text();
+          console.log(result);
+          window.location.replace("/document-upload");
+        } catch (error) {
+          console.error(error);
+        }
+      });
     </script>
-
-</body>
+  </body>
 </html>
