@@ -7,10 +7,25 @@ const signUpPath = "./pages/sign-up.html";
 const testPath = "./pages/test.html";
 const signInPath = "./pages/sign-in.html";
 const documentPath = "./pages/document-upload.html";
-
+const stylepath = "./pages/style.css";
 const pythonPath = "./py_files/python.py";
 
+
 const server = http.createServer((req, res) => {
+    // so it can read style.css
+    if (req.method === "GET" && req.url === "/style.css") { // turns out i need to add style.css to after the / 
+        res.writeHead(200, { "Content-Type": "text/css" });
+        fs.createReadStream(stylepath).pipe(res);
+        return;
+    }
+    // so it can read image for ui
+    if (req.method === "GET" && req.url.startsWith("/img/")) {
+        const imagePath = "./pages" + req.url;
+        res.writeHead(200, { "Content-Type": "image/jpeg" });
+        fs.createReadStream(imagePath).pipe(res);
+        return;
+    }
+    
     //ok. so this is just like framework programming. ok.
     //which means the request consists of method, path, and body
     //right now we only need POST and prob "/sign-in", and the JSON data
