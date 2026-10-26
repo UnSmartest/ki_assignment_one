@@ -1,5 +1,7 @@
 import http from "node:http";
 import fs from "node:fs";
+import path from "node:path"; 
+import Busboy from "busboy"; //just bcz we need it saving user files
 
 const dbPath = "./unecrypted/userDB.json";
 
@@ -7,6 +9,8 @@ const signUpPath = "./pages/sign-up.html";
 const testPath = "./pages/test.html";
 const signInPath = "./pages/sign-in.html";
 const documentPath = "./pages/document-upload.html";
+
+const unecryptedFolder = "./unencrypted";
 
 const pythonPath = "./py_files/python.py";
 
@@ -86,6 +90,31 @@ const server = http.createServer((req, res) => {
         });
         return;
     }
+
+    if(req.method === "POST" && req.url === "/upload-file"){ 
+        // i cant do this anymore. im too tired. i give up
+        console.log("Method received : ", req.method);
+        console.log("Request URL : ", req.url);
+
+        const busboy = Busboy({headers: req.headers});
+
+        busboy.on("file", (fieldname, file, info) => {
+            console.log("Busboy working on file");
+            const outputPath = path.join(unecryptedFolder,info.filename);
+            const writeStream = fs.createWriteStream(outputPath);
+            file.pipe(writeStream);
+        });
+        
+        busboy.on("close", () => {
+            console.log("Busboy is closing");
+            res.writeHead(201, {"Content-Type": "application/json"});
+            res.end(JSON.stringify({message: "File uploaded"}));
+        })
+
+        req.pipe(busboy);
+        return;
+    }
+
 });
 
 server.listen(3000, () => {
