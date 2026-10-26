@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-in Page</title>
+    <title>Sign-up Page</title>
 </head>
 <body>
-    <h1>Sign-in Form</h1>
-    
+    <h1>Sign-up Form</h1>
     <form>
         <div>
             <label for="username">Username :</label> <br>
@@ -15,16 +14,20 @@
         </div>
         <div>
             <label for="password">Password :</label> <br>
-            <input type="text" name="passwordText" required>
+            <input id="pass1" type="text" name="passwordText" required>
+        </div>
+        <div>
+            <label for="confirmPassword">Confirm password :</label> <br>
+            <input id="pass2" type="text" name="confirmPasswordText" required>
         </div>
         <div>
             <input type="submit" value="Sign in">
         </div>
     </form>
-
-    <br><p id="message"></p>
-
-    <br><a href="./test.html">Click me to test out the python code</a>
+    <div>
+        <br><a href="/sign-in">Click me to go to sign-in page</a>
+        <br><a href="/test">Click me to test out the python code</a>
+    </div>
 
     <script>
         /* 
@@ -41,28 +44,26 @@
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
             
+            const passText = await document.getElementById("pass1").value;
+            const confPassText = await document.getElementById("pass2").value;
+
+            console.log(passText, confPassText);
+            if(passText != confPassText){
+                alert("Values in 'Password' and 'Confirm password' do not match.");
+                return;
+            }
+
             const userData = new FormData(form);
             try {
-                const response = await fetch("/sign-in", {
+                const response = await fetch("/sign-up", {
                     method: "POST",
                     body: new URLSearchParams(userData)
                 });
                 const result = await response.text();
+                console.log(result);
             } catch (error) {
                 console.error(error);
             }
-
-            /*
-            Data in localStorage is saved across browser sessions,
-            which I assume means refreshing/closing the tab does not remove it.
-            If we want the data to be reset, then we use sessionStorage.
-
-            Attributes of localStorage
-                .setItem(key, value) writes a key-value into the storage
-                .getItem(key) returns the value assigned to that key
-                .removeItem(key) removes the key-value from the storage
-                .clear() removes all keys and values from the storage
-            */
         })
     </script>
 

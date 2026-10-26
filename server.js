@@ -1,23 +1,53 @@
 import http from "node:http";
 import fs from "node:fs";
-import url from "node:url";
 
 const dbPath = "./unecrypted/userDB.json";
-const signInPath = "./sign-in.html";
+
+const signUpPath = "./pages/sign-up.html";
+const testPath = "./pages/test.html";
+const signInPath = "./pages/sign-in.html";
+
+const pythonPath = "./py_files/python.py";
 
 const server = http.createServer((req, res) => {
     //ok. so this is just like framework programming. ok.
     //which means the request consists of method, path, and body
     //right now we only need POST and prob "/sign-in", and the JSON data
     
-    if(req.method === "GET" && req.url === "/"){
+    if(req.method === "GET" && req.url === "/"){ //landing page
+        res.writeHead(200, {"Content-Type": "text/html"});
+        fs.createReadStream(signUpPath).pipe(res);
+        return;
+    }
+
+    if(req.method === "GET" && req.url === "/test"){ //test.html
+        res.writeHead(200, {"Content-Type": "text/html"});
+        fs.createReadStream(testPath).pipe(res);
+        return;
+    }
+
+    if(req.method === "GET" && req.url === "/python"){ //not to be displayed but for the test.html
+        res.writeHead(200, {"Content-Type": "text/html"});
+        fs.createReadStream(pythonPath).pipe(res);
+        return;
+    }
+
+    if(req.method === "GET" && req.url === "/sign-in"){ //sign-in.html
         res.writeHead(200, {"Content-Type": "text/html"});
         fs.createReadStream(signInPath).pipe(res);
         return;
     }
 
-    if(req.method === "POST" && req.url === "/sign-in"){
-        console.log("POST method found & it's a /sign-in");
+    if(req.method === "GET" && req.url === "/users"){ //not necessarily a webpage, its just to return userDB.json
+        console.log("Method received : ", req.method);
+        console.log("Request URL : ", req.url);
+        res.writeHead(200, {"Content-Type": "application/json"});
+        fs.createReadStream(dbPath).pipe(res);
+        return;
+    }
+
+    if(req.method === "POST" && req.url === "/sign-up"){ 
+        console.log("POST method found & it's a /sign-up");
         let body = "";
         req.on("data", (chunk) => {
             body += chunk.toString();
