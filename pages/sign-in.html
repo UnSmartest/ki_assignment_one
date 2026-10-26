@@ -35,7 +35,7 @@
         
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
-
+            
             try {
                 const response = await fetch("/users", {
                     method: "GET"
@@ -43,15 +43,29 @@
                 const result = await response.json();
                 console.log(result);
 
-                console.log("Length : ", result.length); //how do i get this???
-                for(let i = 0 ; i < Object.keys(result).length ; i++){
-                    console.log("id ", i); 
-                    console.log("username", result.users[i].usernameText);
-                    console.log("password", result.users[i].passwordText);
+                const usernameInput = await document.getElementById("usernameText").value;
+                const passwordInput = await document.getElementById("passwordText").value;
+
+                console.log("Length : ", result.users.length);
+                console.log("usernameInput is ", usernameInput, " and passwordInput is ", passwordInput);
+                for(let i = 0 ; i <= result.users.length ; i++){
+                    console.log("Checking row ", i);
+                    if(i == result.users.length){
+                        alert("Username or password does not exist or incorrect");
+                        return;
+                    }
+                    if(usernameInput === result.users[i].usernameText && passwordInput === result.users[i].passwordText){
+                        console.log("Found match in row ", i, result.users[i]);
+                        console.log("User found... Pretend we're moved to another page.");
+                        window.location.replace("/document-upload");
+                        return;
+                    } else {
+                        console.log("Not row ", i);
+                    }
                 }
 
             } catch (error) {
-                console.error(error);
+                console.log(error);
                 return;
             }
 

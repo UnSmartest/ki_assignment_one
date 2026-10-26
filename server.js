@@ -6,6 +6,7 @@ const dbPath = "./unecrypted/userDB.json";
 const signUpPath = "./pages/sign-up.html";
 const testPath = "./pages/test.html";
 const signInPath = "./pages/sign-in.html";
+const documentPath = "./pages/document-upload.html";
 
 const pythonPath = "./py_files/python.py";
 
@@ -43,6 +44,14 @@ const server = http.createServer((req, res) => {
         console.log("Request URL : ", req.url);
         res.writeHead(200, {"Content-Type": "application/json"});
         fs.createReadStream(dbPath).pipe(res);
+        return;
+    }
+
+    if(req.method === "GET" && req.url === "/document-upload"){
+        console.log("Method received : ", req.method);
+        console.log("Request URL : ", req.url);
+        res.writeHead(200, {"Content-Type": "text/html"});
+        fs.createReadStream(documentPath).pipe(res);
         return;
     }
 

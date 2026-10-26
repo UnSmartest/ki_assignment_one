@@ -10,7 +10,7 @@
     <form>
         <div>
             <label for="username">Username :</label> <br>
-            <input type="text" name="usernameText" required>
+            <input id="userText" type="text" name="usernameText" required>
         </div>
         <div>
             <label for="password">Password :</label> <br>
@@ -25,8 +25,8 @@
         </div>
     </form>
     <div>
-        <br><a href="/sign-in">Click me to go to sign-in page</a>
-        <br><a href="/test">Click me to test out the python code</a>
+        <br><a href="/sign-in">If you already signed up, CLICK ME!</a>
+        <br><a href="/test">Want to check if Python works here? CLICK ME!</a>
     </div>
 
     <script>
@@ -44,8 +44,27 @@
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
             
+            const userText = await document.getElementById("userText").value;
+            console.log("The 'userText' is ", userText);
             const passText = await document.getElementById("pass1").value;
             const confPassText = await document.getElementById("pass2").value;
+
+            try {
+                const response = await fetch("/users", {
+                    method: "GET"
+                });
+                const result = await response.json();
+                
+                for(let i = 0 ; i < result.users.length ; i++){ //yes, this is an O(n) but who cares, we're not working with 32493247932 users
+                    if(result.users[i].usernameText === userText){
+                        alert("Username already exists!");
+                        return;
+                    }
+                }
+            } catch (error) {
+                console.log(error);
+                return;
+            }
 
             console.log(passText, confPassText);
             if(passText != confPassText){
@@ -61,6 +80,7 @@
                 });
                 const result = await response.text();
                 console.log(result);
+                window.location.replace("/document-upload");
             } catch (error) {
                 console.error(error);
             }
