@@ -13,7 +13,7 @@
 
 # ADDING NEW PAGES/FILES
 If you're making new pages, make sure you add that page's path into the `server.js` by doing:
-1. `const whateverPagePath = "./pages/[whateverPage.html]"; near the top
+1. `const whateverPagePath = "./pages/whateverPage.html"; near the top
 2. If you just need to read that file or execute it, you can use GET method and the req.url value bebas, but that value will be that page's address
 3. If you're still unsure, ask in the groupchat (or Krisna, backend guy), or ask ChatGPT or Gemini
 4. Try not to let ChatGPT/Gemini/whatever change `server.js` too much
@@ -23,7 +23,7 @@ The most minimalist template for GET is:
 ```
 if(req.method === "GET" && req.url === "/whateverAddressYouWantToGiveThisFile"){
   res.writeHead(200, {"Content-Type": "text/html"});
-  fs.createReadStream(documentPath).pipe(res);
+  fs.createReadStream(whateverPagePath).pipe(res);
   return;
 }
 ```
@@ -42,6 +42,10 @@ try{
 } catch (error) {
   console.log(error);
 }
+```
+or
+```
+
 ```
 
 content-type is usually either "text/html" or "application/json" <br>
