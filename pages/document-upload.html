@@ -6,8 +6,45 @@
     <title>Document Upload</title>
 </head>
 <body>
-    <h1>Welcome!</h1>
-    <p>Upload your documents here somehow.</p>
-    <a href="/sign-in">Or you can go back to sign-in page.</a>
+    <h1 id="welcomeMessage"></h1>
+    <form>
+        <div>
+            <p>Accepted file formats are : png, docx, pdf, and xls</p>
+            <p>Upload your document here:</p>
+            <input type="file" name="uploadedFile" id="fileUpload" accept=".png, .docx, .pdf, .xlsx">
+            <input type="submit" id="fileSubmit">
+        </div>
+    </form>
+    <br><a href="/sign-in">Or you can go back to sign-in page.</a>
+
+    <script>
+        const activeUser = sessionStorage.getItem("activeUser");
+        console.log("Current user is ", activeUser);
+        document.getElementById("welcomeMessage").innerText = `Welcome, ${activeUser}!`;
+
+        const form = document.querySelector("form");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const uploadedFile = new FormData(form);
+            try{
+                const response = await fetch("/upload-file", {
+                    method: "POST",
+                    body: uploadedFile
+                });
+            } catch (error) {
+                console.log(error);
+            }
+        })
+
+        /*
+        User uploads file to browser,
+        HTML JS sends file to server,
+        server adds file into directory,
+        each file should be assigned to one user,
+        maybe a separate JSON, listing file name & their owner username?
+        */
+        
+    </script>
+
 </body>
 </html>

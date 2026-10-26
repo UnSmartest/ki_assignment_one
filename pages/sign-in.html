@@ -57,6 +57,7 @@
                     if(usernameInput === result.users[i].usernameText && passwordInput === result.users[i].passwordText){
                         console.log("Found match in row ", i, result.users[i]);
                         console.log("User found... Pretend we're moved to another page.");
+                        sessionStorage.setItem("activeUser",usernameInput);
                         window.location.replace("/document-upload");
                         return;
                     } else {

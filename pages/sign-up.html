@@ -80,6 +80,7 @@
                 });
                 const result = await response.text();
                 console.log(result);
+                sessionStorage.setItem("activeUser",userText);
                 window.location.replace("/document-upload");
             } catch (error) {
                 console.error(error);
