@@ -11,7 +11,7 @@
     <div class="container">
       <div class="form-box login">
         <form>
-          <h1>Sign-in Form</h1>
+          <h1>Sign-Up</h1>
           <div class="input-box">
             <!-- <label for="username">Username :</label> <br /> -->
             <input
@@ -26,21 +26,23 @@
             <!-- <label for="password">Password :</label> <br /> -->
             <input
               id="pass1"
-              type="text"
+              type="password"
               name="passwordText"
               required
               placeholder="Password"
             />
+          <input type="checkbox" onclick="myFunction()" class="toggle-password2" />
           </div>
           <div class="input-box">
             <!-- <label for="confirmPassword">Confirm password :</label> <br /> -->
             <input
               id="pass2"
-              type="text"
+              type="password"
               name="confirmPasswordText"
               required
               placeholder="Confirm password"
             />
+            <input type="checkbox" onclick="myFunction()" class="toggle-password2" />
           </div>
           <div>
             <input type="submit" value="Sign in" class="btn" />
@@ -113,6 +115,19 @@
                 console.error(error);
             }
         })
+
+        
+      function myFunction() {
+        var x = document.getElementById("pass1");
+        var y = document.getElementById("pass2");
+        if (x.type === "password") {
+          x.type = "text";
+          y.type = "text";
+        } else {
+          x.type = "password";
+          y.type = "password";
+        }
+      }
     </script>
 
 </body>

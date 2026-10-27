@@ -19,24 +19,13 @@
           <div class="input-box">
             <!-- <label for="username">Username :</label><br /> -->
             <!-- change the label to placeholder -->
-            <input
-              type="text"
-              name="usernameText"
-              id="usernameText"
-              required
-              placeholder="Username"
-            />
+            <input type="text" name="usernameText" id="usernameText" required placeholder="Username"/>
             <i class="bx bx-user"></i>
           </div>
           <div class="input-box">
             <!-- <label for="password">Password :</label><br /> -->
-            <input
-              type="password"
-              name="passwordText"
-              id="passwordText"
-              required
-              placeholder="Password"
-            />
+            <input type="password" name="passwordText" id="passwordText" required placeholder="Password"/>
+            <input type="checkbox" onclick="myFunction()" class="toggle-password"/>
             <i class="bx bx-lock"></i>
           </div>
           <div>
@@ -49,12 +38,12 @@
         </form>
       </div>
       <div class="img-box">
-        <img src="img/images.jpg"/>
+        <img src="img/images.jpg" />
       </div>
     </div>
 
- <script>
-        /*
+    <script>
+      /*
         Uhhhhhhhhhhhhhhhhhhhh. html says GET /users then server responds with userDB.json content
         then we save it as idk. JSON.stringify(response.body). 
         then for obj in that, if inputUsername === obj.usernameText, check if password same.
@@ -62,49 +51,65 @@
         if either false, give warning alert() boleh lah.
         */
 
-        const form = document.querySelector("form");
-        
-        form.addEventListener("submit", async (e) => {
-            e.preventDefault();
-            
-            try {
-                const response = await fetch("/users", {
-                    method: "GET"
-                });
-                const result = await response.json();
-                console.log(result);
+      const form = document.querySelector("form");
 
-                const usernameInput = await document.getElementById("usernameText").value;
-                const passwordInput = await document.getElementById("passwordText").value;
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-                console.log("Length : ", result.users.length);
-                console.log("usernameInput is ", usernameInput, " and passwordInput is ", passwordInput);
-                for(let i = 0 ; i <= result.users.length ; i++){
-                    console.log("Checking row ", i);
-                    if(i == result.users.length){
-                        alert("Username or password does not exist or incorrect");
-                        return;
-                    }
-                    if(usernameInput === result.users[i].usernameText && passwordInput === result.users[i].passwordText){
-                        console.log("Found match in row ", i, result.users[i]);
-                        console.log("User found... Pretend we're moved to another page.");
-                        sessionStorage.setItem("activeUser",usernameInput);
-                        window.location.replace("/document-upload");
-                        return;
-                    } else {
-                        console.log("Not row ", i);
-                    }
-                }
+        try {
+          const response = await fetch("/users", {
+            method: "GET",
+          });
+          const result = await response.json();
+          console.log(result);
 
-            } catch (error) {
-                console.log(error);
-                return;
+          const usernameInput =
+            await document.getElementById("usernameText").value;
+          const passwordInput =
+            await document.getElementById("passwordText").value;
+
+          console.log("Length : ", result.users.length);
+          console.log(
+            "usernameInput is ",
+            usernameInput,
+            " and passwordInput is ",
+            passwordInput,
+          );
+          for (let i = 0; i <= result.users.length; i++) {
+            console.log("Checking row ", i);
+            if (i == result.users.length) {
+              alert("Username or password does not exist or incorrect");
+              return;
             }
+            if (
+              usernameInput === result.users[i].usernameText &&
+              passwordInput === result.users[i].passwordText
+            ) {
+              console.log("Found match in row ", i, result.users[i]);
+              console.log("User found... Pretend we're moved to another page.");
+              sessionStorage.setItem("activeUser", usernameInput);
+              window.location.replace("/document-upload");
+              return;
+            } else {
+              console.log("Not row ", i);
+            }
+          }
+        } catch (error) {
+          console.log(error);
+          return;
+        }
 
-            const fd = new FormData(form);
+        const fd = new FormData(form);
+      });
 
-        })
+      function myFunction() {
+        var x = document.getElementById("passwordText");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
     </script>
-
-</body>
+  </body>
 </html>

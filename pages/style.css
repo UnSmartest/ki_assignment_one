@@ -33,6 +33,17 @@ body{
   overflow: hidden;
 }
 
+.document-container{
+  display: flex;
+  position: relative;
+  width: 85vw;
+  height: 100vh;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
 .form-box {
   width: 50%;
   height: 100%;
@@ -131,3 +142,26 @@ h1{
   font-weight: bold;
   color: #05009A;
 }
+
+.input-box .toggle-password {
+  position: absolute;
+  right: 50px; /* Placed right next to the lock icon */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #05009A;
+}
+
+.input-box .toggle-password2 {
+  position: absolute;
+  right: 20px; /* Placed right next to the lock icon */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #05009A;
+}
+
