@@ -13,6 +13,14 @@
       <b
         ><u> <h1>STUDENT REGISTRATION FORM</h1></u>
       </b>
+      <!-- button for tab -->
+        <div class="tab-nav">
+          <button type="button" class="tab-btn active" data-tab="personal-info">Personal Info</button>
+          <button type="button" class="tab-btn" data-tab="Academic">Academic</button>
+          <button type="button" class="tab-btn" data-tab="Parent-info">Parent Info</button>
+          <button type="button" class="tab-btn" data-tab="document">Documents</button>
+        </div>
+      
       <div id="form">
         <form method="get" action="submit.html">
           <div class="tab-content active" id="personal-info">
@@ -520,6 +528,22 @@
     </div>
 
     <script>
+    // Tab Switching Mechanism
+        const tabBtns = document.querySelectorAll(".tab-btn");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+            tabBtns.forEach((b) => b.classList.remove("active"));
+            tabContents.forEach((c) => c.classList.remove("active"));
+
+            btn.classList.add("active");
+            document.getElementById(btn.dataset.tab).classList.add("active");
+            });
+        });
+
+
+    
       const activeUser = sessionStorage.getItem("activeUser");
       console.log("Current user is ", activeUser);
       document.getElementById("welcomeMessage").innerText =
@@ -546,6 +570,36 @@
         each file should be assigned to one user,
         maybe a separate JSON, listing file name & their owner username?
         */
+
+      const userform = document.getElementById("form");
+
+      userform.addEventListener("submit", async (e) => {
+        e.preventDefault(); // Stop default page refresh
+
+        // 1. Gather all form inputs into a JS object
+        const formData = new FormData(userform);
+        const dataObject = Object.fromEntries(formData.entries());
+
+        // 2. Send the data to your Node.js server as JSON
+        try {
+          const response = await fetch("/save-user", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(dataObject),
+          });
+
+          if (response.ok) {
+            alert("User data saved successfully!");
+            userform.reset();
+          } else {
+            alert("Failed to save data.");
+          }
+        } catch (error) {
+          console.error("Error submitting form:", error);
+        }
+      });
     </script>
   </body>
 </html>
