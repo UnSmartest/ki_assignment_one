@@ -22,7 +22,7 @@
             <input
               type="text"
               name="usernameText"
-              id="username"
+              id="usernameText"
               required
               placeholder="Username"
             />
@@ -33,7 +33,7 @@
             <input
               type="password"
               name="passwordText"
-              id="password"
+              id="passwordText"
               required
               placeholder="Password"
             />
@@ -53,8 +53,8 @@
       </div>
     </div>
 
-    <script>
-      /*
+ <script>
+        /*
         Uhhhhhhhhhhhhhhhhhhhh. html says GET /users then server responds with userDB.json content
         then we save it as idk. JSON.stringify(response.body). 
         then for obj in that, if inputUsername === obj.usernameText, check if password same.
@@ -62,55 +62,49 @@
         if either false, give warning alert() boleh lah.
         */
 
-      const form = document.querySelector("form");
+        const form = document.querySelector("form");
+        
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            
+            try {
+                const response = await fetch("/users", {
+                    method: "GET"
+                });
+                const result = await response.json();
+                console.log(result);
 
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
+                const usernameInput = await document.getElementById("usernameText").value;
+                const passwordInput = await document.getElementById("passwordText").value;
 
-        try {
-          const response = await fetch("/users", {
-            method: "GET",
-          });
-          const result = await response.json();
-          console.log(result);
+                console.log("Length : ", result.users.length);
+                console.log("usernameInput is ", usernameInput, " and passwordInput is ", passwordInput);
+                for(let i = 0 ; i <= result.users.length ; i++){
+                    console.log("Checking row ", i);
+                    if(i == result.users.length){
+                        alert("Username or password does not exist or incorrect");
+                        return;
+                    }
+                    if(usernameInput === result.users[i].usernameText && passwordInput === result.users[i].passwordText){
+                        console.log("Found match in row ", i, result.users[i]);
+                        console.log("User found... Pretend we're moved to another page.");
+                        sessionStorage.setItem("activeUser",usernameInput);
+                        window.location.replace("/document-upload");
+                        return;
+                    } else {
+                        console.log("Not row ", i);
+                    }
+                }
 
-          const usernameInput =
-            await document.getElementById("usernameText").value;
-          const passwordInput =
-            await document.getElementById("passwordText").value;
-
-          console.log("Length : ", result.users.length);
-          console.log(
-            "usernameInput is ",
-            usernameInput,
-            " and passwordInput is ",
-            passwordInput,
-          );
-          for (let i = 0; i <= result.users.length; i++) {
-            console.log("Checking row ", i);
-            if (i == result.users.length) {
-              alert("Username or password does not exist or incorrect");
-              return;
+            } catch (error) {
+                console.log(error);
+                return;
             }
-            if (
-              usernameInput === result.users[i].usernameText &&
-              passwordInput === result.users[i].passwordText
-            ) {
-              console.log("Found match in row ", i, result.users[i]);
-              console.log("User found... Pretend we're moved to another page.");
-              window.location.replace("/document-upload");
-              return;
-            } else {
-              console.log("Not row ", i);
-            }
-          }
-        } catch (error) {
-          console.log(error);
-          return;
-        }
 
-        const fd = new FormData(form);
-      });
+            const fd = new FormData(form);
+
+        })
     </script>
-  </body>
+
+</body>
 </html>
