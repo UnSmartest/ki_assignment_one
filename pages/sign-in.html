@@ -14,16 +14,13 @@
   <body>
     <div class="container">
       <div class="form-box login">
-        <form action="">
+        <form id="signinForm" action="">
           <h1>Sign-in Form</h1>
           <div class="input-box">
-            <!-- <label for="username">Username :</label><br /> -->
-            <!-- change the label to placeholder -->
             <input type="text" name="usernameText" id="usernameText" required placeholder="Username"/>
             <i class="bx bx-user"></i>
           </div>
           <div class="input-box">
-            <!-- <label for="password">Password :</label><br /> -->
             <input type="password" name="passwordText" id="passwordText" required placeholder="Password"/>
             <input type="checkbox" onclick="myFunction()" class="toggle-password"/>
             <i class="bx bx-lock"></i>
@@ -31,10 +28,10 @@
           <div>
             <input class="btn" type="submit" value="Sign in" />
           </div>
+          <div id="signin-msg" style="color: red; font-size: 13px; margin-top: 8px; min-height: 18px;"></div>
           <div class="link">
             <a href="/">Click me to go to sign-up page</a>
           </div>
-          <p id="message"></p>
         </form>
       </div>
       <div class="img-box">
@@ -51,55 +48,36 @@
         if either false, give warning alert() boleh lah.
         */
 
-      const form = document.querySelector("form");
+      const form = document.getElementById("signinForm");
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
+        const msgDiv = document.getElementById("signin-msg");
+        if (msgDiv) msgDiv.textContent = "";
 
         try {
-          const response = await fetch("/users", {
-            method: "GET",
+          const usernameInput = document.getElementById("usernameText").value.trim();
+          const passwordInput = document.getElementById("passwordText").value;
+
+          // the server decrypts the stored password and compares it
+          const response = await fetch("/sign-in", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams({ usernameText: usernameInput, passwordText: passwordInput })
           });
           const result = await response.json();
-          console.log(result);
 
-          const usernameInput =
-            await document.getElementById("usernameText").value;
-          const passwordInput =
-            await document.getElementById("passwordText").value;
-
-          console.log("Length : ", result.users.length);
-          console.log(
-            "usernameInput is ",
-            usernameInput,
-            " and passwordInput is ",
-            passwordInput,
-          );
-          for (let i = 0; i <= result.users.length; i++) {
-            console.log("Checking row ", i);
-            if (i == result.users.length) {
-              alert("Username or password does not exist or incorrect");
-              return;
-            }
-            if (
-              usernameInput === result.users[i].usernameText &&
-              passwordInput === result.users[i].passwordText
-            ) {
-              console.log("Found match in row ", i, result.users[i]);
-              console.log("User found... Pretend we're moved to another page.");
-              sessionStorage.setItem("activeUser", usernameInput);
-              window.location.replace("/document-upload");
-              return;
-            } else {
-              console.log("Not row ", i);
-            }
+          if (response.ok) {
+            sessionStorage.setItem("activeUser", usernameInput);
+            window.location.href = "/document-upload";
+          } else if (msgDiv) {
+            msgDiv.textContent = result.error || "sign in failed";
           }
         } catch (error) {
           console.log(error);
-          return;
+          const msgDiv2 = document.getElementById("signin-msg");
+          if (msgDiv2) msgDiv2.textContent = "sign in failed";
         }
-
-        const fd = new FormData(form);
       });
 
       function myFunction() {

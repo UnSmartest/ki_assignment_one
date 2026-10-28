@@ -1,0 +1,346 @@
+[2026-10-27 18:08:49] Type: Encryption | Method: AES | File: Activity5.xlsx | Size: 30237 bytes | Time: 0.528223s
+[2026-10-27 18:09:19] Type: Encryption | Method: AES | File: Activity5.xlsx | Size: 30237 bytes | Time: 0.002226s
+[2026-10-27 18:10:05] Type: Encryption | Method: AES | File: Activity5.xlsx | Size: 30237 bytes | Time: 0.002848s
+[2026-10-27 18:14:28] Type: Encryption | Method: RC4 | File: Activity5.xlsx | Size: 30237 bytes | Time: 0.000613s
+[2026-10-27 18:14:28] Type: Encryption | Method: AES | File: Activity5.xlsx | Size: 30237 bytes | Time: 0.662999s
+[2026-10-27 18:14:28] Type: Encryption | Method: AES | File: Activity6.xlsx | Size: 17708 bytes | Time: 0.661019s
+[2026-10-27 18:14:28] Type: Encryption | Method: DES | File: Activity5.xlsx | Size: 30237 bytes | Time: 0.663486s
+[2026-10-27 18:14:28] Type: Encryption | Method: RC4 | File: Activity6.xlsx | Size: 17708 bytes | Time: 0.000064s
+[2026-10-27 18:14:28] Type: Encryption | Method: DES | File: Activity6.xlsx | Size: 17708 bytes | Time: 0.000572s
+[2026-10-27 18:51:02] Type: Encryption | Method: RC4 | File: jurnal perempuan template.pdf | Size: 189179 bytes | Time: 0.000912s
+[2026-10-27 18:51:02] Type: Encryption | Method: AES | File: jurnal perempuan template.pdf | Size: 189179 bytes | Time: 0.005288s
+[2026-10-27 18:51:02] Type: Encryption | Method: DES | File: jurnal perempuan template.pdf | Size: 189179 bytes | Time: 0.008826s
+[2026-10-27 18:53:03] Type: Encryption | Method: RC4 | File: W02.pdf | Size: 999622 bytes | Time: 0.002261s
+[2026-10-27 18:53:03] Type: Encryption | Method: AES | File: W02.pdf | Size: 999622 bytes | Time: 0.005204s
+[2026-10-27 18:53:03] Type: Encryption | Method: DES | File: W02.pdf | Size: 999622 bytes | Time: 0.024012s
+[2026-10-27 21:56:38] Type: Encryption | Method: RC4 | File: admin_data | Size: 349 bytes | Time: 0.000545s
+[2026-10-27 21:56:38] Type: Encryption | Method: DES | File: admin_data | Size: 349 bytes | Time: 0.004873s
+[2026-10-27 21:56:38] Type: Encryption | Method: AES | File: admin_data | Size: 349 bytes | Time: 0.005092s
+[2026-10-27 22:01:42] Type: Encryption | Method: RC4 | File: admin_data | Size: 636 bytes | Time: 0.000687s
+[2026-10-27 22:01:42] Type: Encryption | Method: AES | File: admin_data | Size: 636 bytes | Time: 0.005303s
+[2026-10-27 22:01:42] Type: Encryption | Method: DES | File: admin_data | Size: 636 bytes | Time: 0.005015s
+[2026-10-27 22:02:34] Type: Encryption | Method: RC4 | File: admin_data | Size: 912 bytes | Time: 0.000713s
+[2026-10-27 22:02:34] Type: Encryption | Method: AES | File: admin_data | Size: 912 bytes | Time: 0.005916s
+[2026-10-27 22:02:34] Type: Encryption | Method: DES | File: admin_data | Size: 912 bytes | Time: 0.005748s
+[2026-10-27 22:05:13] Type: Encryption | Method: RC4 | File: admin:unnamed.png | Size: 176 bytes | Time: 0.000645s
+[2026-10-27 22:05:13] Type: Encryption | Method: AES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.006146s
+[2026-10-27 22:05:13] Type: Encryption | Method: DES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.005872s
+[2026-10-27 22:05:13] Type: Encryption | Method: RC4 | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.002154s
+[2026-10-27 22:05:13] Type: Encryption | Method: AES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.007299s
+[2026-10-27 22:05:13] Type: Encryption | Method: RC4 | File: admin:Lab Report Template (2).pdf | Size: 356350 bytes | Time: 0.002054s
+[2026-10-27 22:05:13] Type: Encryption | Method: DES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.030938s
+[2026-10-27 22:05:13] Type: Encryption | Method: AES | File: admin:Lab Report Template (2).pdf | Size: 356350 bytes | Time: 0.008709s
+[2026-10-27 22:05:13] Type: Encryption | Method: DES | File: admin:Lab Report Template (2).pdf | Size: 356350 bytes | Time: 0.017084s
+[2026-10-27 22:05:13] Type: Encryption | Method: RC4 | File: admin:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.007293s
+[2026-10-27 22:05:13] Type: Encryption | Method: AES | File: admin:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.008000s
+[2026-10-27 22:05:13] Type: Encryption | Method: RC4 | File: admin_data | Size: 1159 bytes | Time: 0.000723s
+[2026-10-27 22:05:13] Type: Encryption | Method: DES | File: admin_data | Size: 1159 bytes | Time: 0.005570s
+[2026-10-27 22:05:13] Type: Encryption | Method: AES | File: admin_data | Size: 1159 bytes | Time: 0.005899s
+[2026-10-27 22:05:14] Type: Encryption | Method: DES | File: admin:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.095141s
+[2026-10-27 22:15:48] Type: Encryption | Method: RC4 | File: ease_data | Size: 378 bytes | Time: 0.000552s
+[2026-10-27 22:15:48] Type: Encryption | Method: AES | File: ease_data | Size: 378 bytes | Time: 0.005073s
+[2026-10-27 22:15:48] Type: Encryption | Method: DES | File: ease_data | Size: 378 bytes | Time: 0.004882s
+[2026-10-27 22:16:09] Type: Encryption | Method: RC4 | File: ease_data | Size: 653 bytes | Time: 0.000538s
+[2026-10-27 22:16:09] Type: Encryption | Method: AES | File: ease_data | Size: 653 bytes | Time: 0.004775s
+[2026-10-27 22:16:09] Type: Encryption | Method: DES | File: ease_data | Size: 653 bytes | Time: 0.004642s
+[2026-10-27 22:17:03] Type: Encryption | Method: RC4 | File: ease_data | Size: 948 bytes | Time: 0.000712s
+[2026-10-27 22:17:03] Type: Encryption | Method: AES | File: ease_data | Size: 948 bytes | Time: 0.005067s
+[2026-10-27 22:17:03] Type: Encryption | Method: DES | File: ease_data | Size: 948 bytes | Time: 0.004893s
+[2026-10-27 22:18:14] Type: Encryption | Method: RC4 | File: ease:one-sample-ks-table.png | Size: 39130 bytes | Time: 0.000896s
+[2026-10-27 22:18:14] Type: Encryption | Method: AES | File: ease:one-sample-ks-table.png | Size: 39130 bytes | Time: 0.007276s
+[2026-10-27 22:18:14] Type: Encryption | Method: DES | File: ease:one-sample-ks-table.png | Size: 39130 bytes | Time: 0.007949s
+[2026-10-27 22:18:14] Type: Encryption | Method: RC4 | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.001718s
+[2026-10-27 22:18:14] Type: Encryption | Method: AES | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.006949s
+[2026-10-27 22:18:14] Type: Encryption | Method: RC4 | File: ease:Assignment 3 Protege - Knowledge Based Engineering.pdf | Size: 379833 bytes | Time: 0.001272s
+[2026-10-27 22:18:14] Type: Encryption | Method: AES | File: ease:Assignment 3 Protege - Knowledge Based Engineering.pdf | Size: 379833 bytes | Time: 0.006086s
+[2026-10-27 22:18:14] Type: Encryption | Method: DES | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.019851s
+[2026-10-27 22:18:14] Type: Encryption | Method: DES | File: ease:Assignment 3 Protege - Knowledge Based Engineering.pdf | Size: 379833 bytes | Time: 0.013494s
+[2026-10-27 22:18:14] Type: Encryption | Method: RC4 | File: ease:bottle.mp4 | Size: 230634 bytes | Time: 0.001029s
+[2026-10-27 22:18:14] Type: Encryption | Method: AES | File: ease:bottle.mp4 | Size: 230634 bytes | Time: 0.007290s
+[2026-10-27 22:18:14] Type: Encryption | Method: RC4 | File: ease_data | Size: 1195 bytes | Time: 0.000693s
+[2026-10-27 22:18:14] Type: Encryption | Method: DES | File: ease:bottle.mp4 | Size: 230634 bytes | Time: 0.011690s
+[2026-10-27 22:18:14] Type: Encryption | Method: AES | File: ease_data | Size: 1195 bytes | Time: 0.005345s
+[2026-10-27 22:18:14] Type: Encryption | Method: DES | File: ease_data | Size: 1195 bytes | Time: 0.005060s
+[2026-10-27 22:21:14] Type: Encryption | Method: RC4 | File: ease_data | Size: 1163 bytes | Time: 0.000576s
+[2026-10-27 22:21:14] Type: Encryption | Method: DES | File: ease_data | Size: 1163 bytes | Time: 0.004846s
+[2026-10-27 22:21:14] Type: Encryption | Method: AES | File: ease_data | Size: 1163 bytes | Time: 0.005073s
+[2026-10-27 22:21:28] Type: Encryption | Method: RC4 | File: ease_data | Size: 1163 bytes | Time: 0.000578s
+[2026-10-27 22:21:28] Type: Encryption | Method: AES | File: ease_data | Size: 1163 bytes | Time: 0.005054s
+[2026-10-27 22:21:28] Type: Encryption | Method: DES | File: ease_data | Size: 1163 bytes | Time: 0.004931s
+[2026-10-27 22:21:54] Type: Encryption | Method: RC4 | File: ease_data | Size: 1132 bytes | Time: 0.000562s
+[2026-10-27 22:21:54] Type: Encryption | Method: DES | File: ease_data | Size: 1132 bytes | Time: 0.004486s
+[2026-10-27 22:21:54] Type: Encryption | Method: AES | File: ease_data | Size: 1132 bytes | Time: 0.004675s
+[2026-10-27 22:22:18] Type: Encryption | Method: RC4 | File: ease:unnamed.png | Size: 176 bytes | Time: 0.000654s
+[2026-10-27 22:22:18] Type: Encryption | Method: DES | File: ease:unnamed.png | Size: 176 bytes | Time: 0.006382s
+[2026-10-27 22:22:18] Type: Encryption | Method: AES | File: ease:unnamed.png | Size: 176 bytes | Time: 0.006587s
+[2026-10-27 22:22:18] Type: Encryption | Method: RC4 | File: ease:SOAL ETS ITS 2026.docx | Size: 48190 bytes | Time: 0.001000s
+[2026-10-27 22:22:18] Type: Encryption | Method: AES | File: ease:SOAL ETS ITS 2026.docx | Size: 48190 bytes | Time: 0.006146s
+[2026-10-27 22:22:18] Type: Encryption | Method: DES | File: ease:SOAL ETS ITS 2026.docx | Size: 48190 bytes | Time: 0.007236s
+[2026-10-27 22:22:18] Type: Encryption | Method: RC4 | File: ease:W02.pdf | Size: 999622 bytes | Time: 0.003184s
+[2026-10-27 22:22:18] Type: Encryption | Method: AES | File: ease:W02.pdf | Size: 999622 bytes | Time: 0.007668s
+[2026-10-27 22:22:18] Type: Encryption | Method: DES | File: ease:W02.pdf | Size: 999622 bytes | Time: 0.028461s
+[2026-10-27 22:22:18] Type: Encryption | Method: RC4 | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.007342s
+[2026-10-27 22:22:18] Type: Encryption | Method: AES | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.009021s
+[2026-10-27 22:22:18] Type: Encryption | Method: RC4 | File: ease_data | Size: 1132 bytes | Time: 0.001177s
+[2026-10-27 22:22:18] Type: Encryption | Method: AES | File: ease_data | Size: 1132 bytes | Time: 0.006076s
+[2026-10-27 22:22:18] Type: Encryption | Method: DES | File: ease_data | Size: 1132 bytes | Time: 0.005744s
+[2026-10-27 22:22:19] Type: Encryption | Method: DES | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.092974s
+[2026-10-27 23:00:34] Type: Encryption | Method: RC4 | File: ease:unnamed.png | Size: 176 bytes | Time: 0.000678s
+[2026-10-27 23:00:34] Type: Encryption | Method: AES | File: ease:unnamed.png | Size: 176 bytes | Time: 0.005629s
+[2026-10-27 23:00:34] Type: Encryption | Method: DES | File: ease:unnamed.png | Size: 176 bytes | Time: 0.005302s
+[2026-10-27 23:00:34] Type: Encryption | Method: RC4 | File: ease:Lab Report.pdf | Size: 143490 bytes | Time: 0.001268s
+[2026-10-27 23:00:34] Type: Encryption | Method: AES | File: ease:Lab Report.pdf | Size: 143490 bytes | Time: 0.006047s
+[2026-10-27 23:00:34] Type: Encryption | Method: DES | File: ease:Lab Report.pdf | Size: 143490 bytes | Time: 0.009871s
+[2026-10-27 23:00:34] Type: Encryption | Method: RC4 | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.001536s
+[2026-10-27 23:00:34] Type: Encryption | Method: AES | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.006263s
+[2026-10-27 23:00:34] Type: Encryption | Method: DES | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.016210s
+[2026-10-27 23:00:34] Type: Encryption | Method: AES | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.006923s
+[2026-10-27 23:00:34] Type: Encryption | Method: RC4 | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.006547s
+[2026-10-27 23:00:34] Type: Encryption | Method: DES | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.091821s[2026-10-27 23:11:37] Type: Encryption | Method: RC4 | File: ease:unnamed.png | Size: 176 bytes | Time: 0.001109s
+[2026-10-27 23:11:37] Type: Encryption | Method: RC4 | File: ease:Lab Report.pdf | Size: 143490 bytes | Time: 0.001783s
+[2026-10-27 23:11:37] Type: Encryption | Method: DES | File: ease:unnamed.png | Size: 176 bytes | Time: 0.009133s
+[2026-10-27 23:11:37] Type: Encryption | Method: AES | File: ease:unnamed.png | Size: 176 bytes | Time: 0.009510s
+[2026-10-27 23:11:37] Type: Encryption | Method: AES | File: ease:Lab Report.pdf | Size: 143490 bytes | Time: 0.012355s
+[2026-10-27 23:11:37] Type: Encryption | Method: DES | File: ease:Lab Report.pdf | Size: 143490 bytes | Time: 0.016169s
+[2026-10-27 23:11:37] Type: Encryption | Method: RC4 | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.001505s
+[2026-10-27 23:11:37] Type: Encryption | Method: AES | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.006073s
+[2026-10-27 23:11:37] Type: Encryption | Method: DES | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.016780s
+[2026-10-27 23:11:37] Type: Encryption | Method: RC4 | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.008754s
+[2026-10-27 23:11:37] Type: Encryption | Method: AES | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.009502s
+[2026-10-27 23:11:37] Type: Encryption | Method: RC4 | File: ease_data | Size: 1153 bytes | Time: 0.000783s
+[2026-10-27 23:11:37] Type: Encryption | Method: AES | File: ease_data | Size: 1153 bytes | Time: 0.006522s
+[2026-10-27 23:11:37] Type: Encryption | Method: DES | File: ease_data | Size: 1153 bytes | Time: 0.006319s
+[2026-10-27 23:11:37] Type: Encryption | Method: DES | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.096424s
+[2026-10-27 23:11:50] Type: Encryption | Method: RC4 | File: ease:unnamed.png | Size: 176 bytes | Time: 0.000663s
+[2026-10-27 23:11:50] Type: Encryption | Method: DES | File: ease:unnamed.png | Size: 176 bytes | Time: 0.005153s
+[2026-10-27 23:11:50] Type: Encryption | Method: AES | File: ease:unnamed.png | Size: 176 bytes | Time: 0.005444s
+[2026-10-27 23:11:50] Type: Encryption | Method: RC4 | File: ease:Lab Report.pdf | Size: 143490 bytes | Time: 0.000999s
+[2026-10-27 23:11:50] Type: Encryption | Method: AES | File: ease:Lab Report.pdf | Size: 143490 bytes | Time: 0.006941s
+[2026-10-27 23:11:50] Type: Encryption | Method: DES | File: ease:Lab Report.pdf | Size: 143490 bytes | Time: 0.010562s
+[2026-10-27 23:11:50] Type: Encryption | Method: RC4 | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.001883s
+[2026-10-27 23:11:50] Type: Encryption | Method: AES | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.008084s
+[2026-10-27 23:11:50] Type: Encryption | Method: DES | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.020018s
+[2026-10-27 23:11:50] Type: Encryption | Method: AES | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.009762s
+[2026-10-27 23:11:50] Type: Encryption | Method: RC4 | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.008936s
+[2026-10-27 23:11:50] Type: Encryption | Method: RC4 | File: ease_data | Size: 1153 bytes | Time: 0.001359s
+[2026-10-27 23:11:50] Type: Encryption | Method: AES | File: ease_data | Size: 1153 bytes | Time: 0.006830s
+[2026-10-27 23:11:50] Type: Encryption | Method: DES | File: ease_data | Size: 1153 bytes | Time: 0.006537s
+[2026-10-27 23:11:50] Type: Encryption | Method: DES | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.096573s
+[2026-10-27 23:12:11] Type: Encryption | Method: RC4 | File: ease:one-sample-ks-table.png | Size: 39130 bytes | Time: 0.000887s
+[2026-10-27 23:12:11] Type: Encryption | Method: AES | File: ease:one-sample-ks-table.png | Size: 39130 bytes | Time: 0.006260s
+[2026-10-27 23:12:11] Type: Encryption | Method: DES | File: ease:one-sample-ks-table.png | Size: 39130 bytes | Time: 0.007106s
+[2026-10-27 23:12:11] Type: Encryption | Method: RC4 | File: ease:Lab Report.pdf | Size: 143490 bytes | Time: 0.001358s
+[2026-10-27 23:12:11] Type: Encryption | Method: RC4 | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.001432s
+[2026-10-27 23:12:11] Type: Encryption | Method: AES | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.005947s
+[2026-10-27 23:12:11] Type: Encryption | Method: AES | File: ease:Lab Report.pdf | Size: 143490 bytes | Time: 0.006849s
+[2026-10-27 23:12:11] Type: Encryption | Method: DES | File: ease:Lab Report.pdf | Size: 143490 bytes | Time: 0.009737s
+[2026-10-27 23:12:11] Type: Encryption | Method: DES | File: ease:Book Template (3).pdf | Size: 530069 bytes | Time: 0.017021s
+[2026-10-27 23:12:11] Type: Encryption | Method: AES | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.007895s
+[2026-10-27 23:12:11] Type: Encryption | Method: RC4 | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.007504s
+[2026-10-27 23:12:11] Type: Encryption | Method: RC4 | File: ease_data | Size: 1153 bytes | Time: 0.000822s
+[2026-10-27 23:12:11] Type: Encryption | Method: DES | File: ease_data | Size: 1153 bytes | Time: 0.005778s
+[2026-10-27 23:12:11] Type: Encryption | Method: AES | File: ease_data | Size: 1153 bytes | Time: 0.005990s
+[2026-10-27 23:12:11] Type: Encryption | Method: DES | File: ease:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.092811s
+[2026-10-28 11:38:53] Type: Encryption | Method: AES | File: admin_password | Size: 7 bytes | Time: 0.003764s
+[2026-10-28 11:39:00] Type: Decryption | Method: AES | File: admin_password | Size: 7 bytes | Time: 0.003245s
+[2026-10-28 11:41:09] Type: Encryption | Method: RC4 | File: admin_personal | Size: 322 bytes | Time: 0.000574s
+[2026-10-28 11:41:09] Type: Encryption | Method: DES | File: admin_personal | Size: 322 bytes | Time: 0.004535s
+[2026-10-28 11:41:09] Type: Encryption | Method: AES | File: admin_personal | Size: 322 bytes | Time: 0.004831s
+[2026-10-28 11:41:31] Type: Decryption | Method: AES | File: admin_password | Size: 7 bytes | Time: 0.003270s
+[2026-10-28 11:41:32] Type: Decryption | Method: AES | File: admin_personal | Size: 322 bytes | Time: 0.003355s
+[2026-10-28 11:42:28] Type: Encryption | Method: RC4 | File: admin_academic | Size: 261 bytes | Time: 0.000617s
+[2026-10-28 11:42:28] Type: Encryption | Method: DES | File: admin_academic | Size: 261 bytes | Time: 0.004858s
+[2026-10-28 11:42:28] Type: Encryption | Method: AES | File: admin_academic | Size: 261 bytes | Time: 0.005185s
+[2026-10-28 11:43:00] Type: Encryption | Method: RC4 | File: admin_parent | Size: 264 bytes | Time: 0.000532s
+[2026-10-28 11:43:00] Type: Encryption | Method: DES | File: admin_parent | Size: 264 bytes | Time: 0.004624s
+[2026-10-28 11:43:00] Type: Encryption | Method: AES | File: admin_parent | Size: 264 bytes | Time: 0.004815s
+[2026-10-28 11:43:14] Type: Encryption | Method: RC4 | File: admin_parent | Size: 268 bytes | Time: 0.000528s
+[2026-10-28 11:43:14] Type: Encryption | Method: AES | File: admin_parent | Size: 268 bytes | Time: 0.005162s
+[2026-10-28 11:43:14] Type: Encryption | Method: DES | File: admin_parent | Size: 268 bytes | Time: 0.004764s
+[2026-10-28 11:43:29] Type: Decryption | Method: AES | File: admin_password | Size: 7 bytes | Time: 0.003192s
+[2026-10-28 11:43:30] Type: Decryption | Method: AES | File: admin_personal | Size: 322 bytes | Time: 0.003385s
+[2026-10-28 11:43:30] Type: Decryption | Method: AES | File: admin_academic | Size: 261 bytes | Time: 0.000054s
+[2026-10-28 11:43:30] Type: Decryption | Method: AES | File: admin_parent | Size: 268 bytes | Time: 0.000036s
+[2026-10-28 11:44:12] Type: Encryption | Method: RC4 | File: admin:unnamed.png | Size: 176 bytes | Time: 0.000663s
+[2026-10-28 11:44:12] Type: Encryption | Method: DES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.006051s
+[2026-10-28 11:44:12] Type: Encryption | Method: AES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.006353s
+[2026-10-28 11:44:12] Type: Encryption | Method: RC4 | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.002683s
+[2026-10-28 11:44:12] Type: Encryption | Method: AES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.007993s
+[2026-10-28 11:44:12] Type: Encryption | Method: RC4 | File: admin:Book Template (3).pdf | Size: 530069 bytes | Time: 0.001331s
+[2026-10-28 11:44:12] Type: Encryption | Method: AES | File: admin:Book Template (3).pdf | Size: 530069 bytes | Time: 0.005524s
+[2026-10-28 11:44:12] Type: Encryption | Method: DES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.027449s
+[2026-10-28 11:44:12] Type: Encryption | Method: DES | File: admin:Book Template (3).pdf | Size: 530069 bytes | Time: 0.015769s
+[2026-10-28 11:44:12] Type: Encryption | Method: RC4 | File: admin:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.007441s
+[2026-10-28 11:44:12] Type: Encryption | Method: AES | File: admin:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.008773s
+[2026-10-28 11:44:12] Type: Encryption | Method: RC4 | File: admin_documents | Size: 232 bytes | Time: 0.001106s
+[2026-10-28 11:44:12] Type: Encryption | Method: AES | File: admin_documents | Size: 232 bytes | Time: 0.005944s
+[2026-10-28 11:44:12] Type: Encryption | Method: DES | File: admin_documents | Size: 232 bytes | Time: 0.005489s
+[2026-10-28 11:44:12] Type: Encryption | Method: DES | File: admin:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.093444s
+[2026-10-28 11:44:14] Type: Decryption | Method: AES | File: admin:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.006779s
+[2026-10-28 11:44:18] Type: Decryption | Method: AES | File: admin:Book Template (3).pdf | Size: 530069 bytes | Time: 0.003627s
+[2026-10-28 11:44:21] Type: Decryption | Method: AES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.003907s
+[2026-10-28 11:44:24] Type: Decryption | Method: AES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.003547s
+[2026-10-28 11:44:27] Type: Decryption | Method: AES | File: admin:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.006333s
+[2026-10-28 11:44:33] Type: Decryption | Method: AES | File: admin:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.006450s
+[2026-10-28 11:44:39] Type: Decryption | Method: AES | File: admin:panenlink presentation vn.mp4 | Size: 4447152 bytes | Time: 0.007114s
+[2026-10-28 11:47:26] Type: Encryption | Method: RC4 | File: admin:unnamed.png | Size: 176 bytes | Time: 0.000802s
+[2026-10-28 11:47:26] Type: Encryption | Method: RC4 | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.002682s
+[2026-10-28 11:47:26] Type: Encryption | Method: AES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.005330s
+[2026-10-28 11:47:26] Type: Encryption | Method: DES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.005041s
+[2026-10-28 11:47:26] Type: Encryption | Method: AES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.006821s
+[2026-10-28 11:47:26] Type: Encryption | Method: RC4 | File: admin:Book Template (3).pdf | Size: 530069 bytes | Time: 0.001720s
+[2026-10-28 11:47:26] Type: Encryption | Method: AES | File: admin:Book Template (3).pdf | Size: 530069 bytes | Time: 0.007022s
+[2026-10-28 11:47:26] Type: Encryption | Method: DES | File: admin:Book Template (3).pdf | Size: 530069 bytes | Time: 0.017834s
+[2026-10-28 11:47:26] Type: Encryption | Method: DES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.029012s
+[2026-10-28 11:47:26] Type: Encryption | Method: RC4 | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.001110s
+[2026-10-28 11:47:26] Type: Encryption | Method: AES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.006108s
+[2026-10-28 11:47:26] Type: Encryption | Method: RC4 | File: admin_documents | Size: 232 bytes | Time: 0.000714s
+[2026-10-28 11:47:26] Type: Encryption | Method: DES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.010645s
+[2026-10-28 11:47:26] Type: Encryption | Method: DES | File: admin_documents | Size: 232 bytes | Time: 0.005613s
+[2026-10-28 11:47:26] Type: Encryption | Method: AES | File: admin_documents | Size: 232 bytes | Time: 0.006107s
+[2026-10-28 11:47:26] Type: Decryption | Method: AES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.004236s
+[2026-10-28 11:50:23] Type: Decryption | Method: AES | File: admin_personal | Size: 322 bytes | Time: 0.003784s
+[2026-10-28 11:50:23] Type: Decryption | Method: AES | File: admin_academic | Size: 261 bytes | Time: 0.000047s
+[2026-10-28 11:50:23] Type: Decryption | Method: AES | File: admin_parent | Size: 268 bytes | Time: 0.000029s
+[2026-10-28 11:50:23] Type: Decryption | Method: AES | File: admin_documents | Size: 232 bytes | Time: 0.000047s
+[2026-10-28 11:50:51] Type: Encryption | Method: RC4 | File: admin:unnamed.png | Size: 176 bytes | Time: 0.000643s
+[2026-10-28 11:50:51] Type: Encryption | Method: AES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.005369s
+[2026-10-28 11:50:51] Type: Encryption | Method: DES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.005099s
+[2026-10-28 11:50:51] Type: Encryption | Method: RC4 | File: admin:Information Security Assignment 1 Report.pdf | Size: 291941 bytes | Time: 0.001370s
+[2026-10-28 11:50:51] Type: Encryption | Method: AES | File: admin:Information Security Assignment 1 Report.pdf | Size: 291941 bytes | Time: 0.006117s
+[2026-10-28 11:50:51] Type: Encryption | Method: DES | File: admin:Information Security Assignment 1 Report.pdf | Size: 291941 bytes | Time: 0.012108s
+[2026-10-28 11:50:51] Type: Encryption | Method: RC4 | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.003019s
+[2026-10-28 11:50:51] Type: Encryption | Method: AES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.006734s
+[2026-10-28 11:50:51] Type: Encryption | Method: RC4 | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.001344s
+[2026-10-28 11:50:51] Type: Encryption | Method: RC4 | File: admin_documents | Size: 232 bytes | Time: 0.000693s
+[2026-10-28 11:50:51] Type: Encryption | Method: AES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.005803s
+[2026-10-28 11:50:51] Type: Encryption | Method: AES | File: admin_documents | Size: 232 bytes | Time: 0.005950s
+[2026-10-28 11:50:51] Type: Encryption | Method: DES | File: admin_documents | Size: 232 bytes | Time: 0.005587s
+[2026-10-28 11:50:51] Type: Encryption | Method: DES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.009994s
+[2026-10-28 11:50:51] Type: Encryption | Method: DES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.026695s
+[2026-10-28 11:50:55] Type: Decryption | Method: AES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.003257s
+[2026-10-28 11:50:57] Type: Decryption | Method: AES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.003364s
+[2026-10-28 11:51:09] Type: Decryption | Method: AES | File: admin_password | Size: 7 bytes | Time: 0.003410s
+[2026-10-28 11:51:09] Type: Decryption | Method: AES | File: admin_personal | Size: 322 bytes | Time: 0.003222s
+[2026-10-28 11:51:09] Type: Decryption | Method: AES | File: admin_academic | Size: 261 bytes | Time: 0.000052s
+[2026-10-28 11:51:09] Type: Decryption | Method: AES | File: admin_parent | Size: 268 bytes | Time: 0.000030s
+[2026-10-28 11:51:09] Type: Decryption | Method: AES | File: admin_documents | Size: 232 bytes | Time: 0.000028s
+[2026-10-28 12:02:44] Type: Decryption | Method: AES | File: admin_personal | Size: 322 bytes | Time: 0.003612s
+[2026-10-28 12:02:44] Type: Decryption | Method: AES | File: admin_academic | Size: 261 bytes | Time: 0.000050s
+[2026-10-28 12:02:44] Type: Decryption | Method: AES | File: admin_parent | Size: 268 bytes | Time: 0.000034s
+[2026-10-28 12:02:44] Type: Decryption | Method: AES | File: admin_documents | Size: 232 bytes | Time: 0.000041s
+[2026-10-28 12:03:24] Type: Encryption | Method: RC4 | File: admin:unnamed.png | Size: 176 bytes | Time: 0.000837s
+[2026-10-28 12:03:24] Type: Encryption | Method: DES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.005713s
+[2026-10-28 12:03:24] Type: Encryption | Method: RC4 | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.003003s
+[2026-10-28 12:03:24] Type: Encryption | Method: AES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.007393s
+[2026-10-28 12:03:24] Type: Encryption | Method: RC4 | File: admin:Lab Report Template (1).pdf | Size: 369940 bytes | Time: 0.001202s
+[2026-10-28 12:03:24] Type: Encryption | Method: AES | File: admin:Lab Report Template (1).pdf | Size: 369940 bytes | Time: 0.006487s
+[2026-10-28 12:03:24] Type: Encryption | Method: RC4 | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.001417s
+[2026-10-28 12:03:24] Type: Encryption | Method: AES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.005784s
+[2026-10-28 12:03:24] Type: Encryption | Method: DES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.031494s
+[2026-10-28 12:03:24] Type: Encryption | Method: DES | File: admin:Lab Report Template (1).pdf | Size: 369940 bytes | Time: 0.015853s
+[2026-10-28 12:03:24] Type: Encryption | Method: DES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.010535s
+[2026-10-28 12:03:24] Type: Encryption | Method: RC4 | File: admin_documents | Size: 351 bytes | Time: 0.001110s
+[2026-10-28 12:03:24] Type: Encryption | Method: AES | File: admin_documents | Size: 351 bytes | Time: 0.005893s
+[2026-10-28 12:03:24] Type: Encryption | Method: DES | File: admin_documents | Size: 351 bytes | Time: 0.005565s
+[2026-10-28 12:03:27] Type: Encryption | Method: RC4 | File: admin:unnamed.png | Size: 176 bytes | Time: 0.000854s
+[2026-10-28 12:03:27] Type: Encryption | Method: DES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.006026s
+[2026-10-28 12:03:27] Type: Encryption | Method: AES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.006344s
+[2026-10-28 12:03:27] Type: Encryption | Method: RC4 | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.002816s
+[2026-10-28 12:03:27] Type: Encryption | Method: AES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.007773s
+[2026-10-28 12:03:27] Type: Encryption | Method: RC4 | File: admin:Lab Report Template (1).pdf | Size: 369940 bytes | Time: 0.001362s
+[2026-10-28 12:03:27] Type: Encryption | Method: AES | File: admin:Lab Report Template (1).pdf | Size: 369940 bytes | Time: 0.005516s
+[2026-10-28 12:03:27] Type: Encryption | Method: RC4 | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.000960s
+[2026-10-28 12:03:27] Type: Encryption | Method: DES | File: admin:Lab Report Template (1).pdf | Size: 369940 bytes | Time: 0.013305s
+[2026-10-28 12:03:27] Type: Encryption | Method: AES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.004802s
+[2026-10-28 12:03:27] Type: Encryption | Method: DES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.028141s
+[2026-10-28 12:03:27] Type: Encryption | Method: DES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.009681s
+[2026-10-28 12:03:27] Type: Encryption | Method: RC4 | File: admin_documents | Size: 351 bytes | Time: 0.000759s
+[2026-10-28 12:03:27] Type: Encryption | Method: DES | File: admin_documents | Size: 351 bytes | Time: 0.005457s
+[2026-10-28 12:03:27] Type: Encryption | Method: AES | File: admin_documents | Size: 351 bytes | Time: 0.005863s
+[2026-10-28 12:03:29] Type: Decryption | Method: AES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.003389s
+[2026-10-28 12:03:34] Type: Decryption | Method: AES | File: admin_password | Size: 7 bytes | Time: 0.003417s
+[2026-10-28 12:03:34] Type: Decryption | Method: AES | File: admin_personal | Size: 322 bytes | Time: 0.003166s
+[2026-10-28 12:03:34] Type: Decryption | Method: AES | File: admin_academic | Size: 261 bytes | Time: 0.000047s
+[2026-10-28 12:03:34] Type: Decryption | Method: AES | File: admin_parent | Size: 268 bytes | Time: 0.000035s
+[2026-10-28 12:03:34] Type: Decryption | Method: AES | File: admin_documents | Size: 351 bytes | Time: 0.000027s
+[2026-10-28 12:14:22] Type: Decryption | Method: AES | File: admin_personal | Size: 322 bytes | Time: 0.004249s
+[2026-10-28 12:14:22] Type: Decryption | Method: AES | File: admin_academic | Size: 261 bytes | Time: 0.000079s
+[2026-10-28 12:14:22] Type: Decryption | Method: AES | File: admin_parent | Size: 268 bytes | Time: 0.000054s
+[2026-10-28 12:14:22] Type: Decryption | Method: AES | File: admin_documents | Size: 351 bytes | Time: 0.000053s
+[2026-10-28 12:14:36] Type: Decryption | Method: AES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.003579s
+[2026-10-28 12:14:59] Type: Encryption | Method: RC4 | File: admin:unnamed.png | Size: 176 bytes | Time: 0.000824s
+[2026-10-28 12:14:59] Type: Encryption | Method: AES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.005429s
+[2026-10-28 12:14:59] Type: Encryption | Method: DES | File: admin:unnamed.png | Size: 176 bytes | Time: 0.005136s
+[2026-10-28 12:14:59] Type: Encryption | Method: RC4 | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.005499s
+[2026-10-28 12:14:59] Type: Encryption | Method: AES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.007279s
+[2026-10-28 12:14:59] Type: Encryption | Method: RC4 | File: admin:Lab Report Template (5).pdf | Size: 356978 bytes | Time: 0.001468s
+[2026-10-28 12:14:59] Type: Encryption | Method: AES | File: admin:Lab Report Template (5).pdf | Size: 356978 bytes | Time: 0.006234s
+[2026-10-28 12:14:59] Type: Encryption | Method: DES | File: admin:W02.pdf | Size: 999622 bytes | Time: 0.028348s
+[2026-10-28 12:14:59] Type: Encryption | Method: DES | File: admin:Lab Report Template (5).pdf | Size: 356978 bytes | Time: 0.014415s
+[2026-10-28 12:14:59] Type: Encryption | Method: RC4 | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.001361s
+[2026-10-28 12:14:59] Type: Encryption | Method: AES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.006253s
+[2026-10-28 12:14:59] Type: Encryption | Method: RC4 | File: admin_documents | Size: 351 bytes | Time: 0.000714s
+[2026-10-28 12:14:59] Type: Encryption | Method: DES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.011338s
+[2026-10-28 12:14:59] Type: Encryption | Method: DES | File: admin_documents | Size: 351 bytes | Time: 0.005240s
+[2026-10-28 12:14:59] Type: Encryption | Method: AES | File: admin_documents | Size: 351 bytes | Time: 0.005536s
+[2026-10-28 12:15:03] Type: Encryption | Method: RC4 | File: admin_documents | Size: 351 bytes | Time: 0.000510s
+[2026-10-28 12:15:03] Type: Encryption | Method: AES | File: admin_documents | Size: 351 bytes | Time: 0.004177s
+[2026-10-28 12:15:03] Type: Encryption | Method: DES | File: admin_documents | Size: 351 bytes | Time: 0.003995s
+[2026-10-28 12:15:10] Type: Encryption | Method: RC4 | File: admin_documents | Size: 351 bytes | Time: 0.000519s
+[2026-10-28 12:15:10] Type: Encryption | Method: DES | File: admin_documents | Size: 351 bytes | Time: 0.004226s
+[2026-10-28 12:15:10] Type: Encryption | Method: AES | File: admin_documents | Size: 351 bytes | Time: 0.004505s
+[2026-10-28 12:15:14] Type: Decryption | Method: AES | File: admin_password | Size: 7 bytes | Time: 0.003176s
+[2026-10-28 12:15:14] Type: Decryption | Method: AES | File: admin_personal | Size: 322 bytes | Time: 0.003459s
+[2026-10-28 12:15:14] Type: Decryption | Method: AES | File: admin_academic | Size: 261 bytes | Time: 0.000053s
+[2026-10-28 12:15:14] Type: Decryption | Method: AES | File: admin_parent | Size: 268 bytes | Time: 0.000038s
+[2026-10-28 12:15:14] Type: Decryption | Method: AES | File: admin_documents | Size: 351 bytes | Time: 0.000031s
+[2026-10-28 12:15:48] Type: Decryption | Method: AES | File: admin_password | Size: 7 bytes | Time: 0.003747s
+[2026-10-28 12:15:48] Type: Decryption | Method: AES | File: admin_personal | Size: 322 bytes | Time: 0.003535s
+[2026-10-28 12:15:48] Type: Decryption | Method: AES | File: admin_academic | Size: 261 bytes | Time: 0.000053s
+[2026-10-28 12:15:48] Type: Decryption | Method: AES | File: admin_parent | Size: 268 bytes | Time: 0.000033s
+[2026-10-28 12:15:48] Type: Decryption | Method: AES | File: admin_documents | Size: 351 bytes | Time: 0.000026s
+[2026-10-28 12:18:27] Type: Decryption | Method: AES | File: admin_personal | Size: 322 bytes | Time: 0.004038s
+[2026-10-28 12:18:27] Type: Decryption | Method: AES | File: admin_academic | Size: 261 bytes | Time: 0.000087s
+[2026-10-28 12:18:27] Type: Decryption | Method: AES | File: admin_parent | Size: 268 bytes | Time: 0.000041s
+[2026-10-28 12:18:27] Type: Decryption | Method: AES | File: admin_documents | Size: 351 bytes | Time: 0.000040s
+[2026-10-28 12:20:32] Type: Encryption | Method: RC4 | File: admin_documents | Size: 351 bytes | Time: 0.000505s
+[2026-10-28 12:20:32] Type: Encryption | Method: DES | File: admin_documents | Size: 351 bytes | Time: 0.004473s
+[2026-10-28 12:20:32] Type: Encryption | Method: AES | File: admin_documents | Size: 351 bytes | Time: 0.004665s
+[2026-10-28 12:21:59] Type: Encryption | Method: AES | File: ease_password | Size: 4 bytes | Time: 0.003280s
+[2026-10-28 12:22:05] Type: Decryption | Method: AES | File: ease_password | Size: 4 bytes | Time: 0.003270s
+[2026-10-28 12:22:56] Type: Encryption | Method: RC4 | File: ease_personal | Size: 307 bytes | Time: 0.000567s
+[2026-10-28 12:22:56] Type: Encryption | Method: DES | File: ease_personal | Size: 307 bytes | Time: 0.004229s
+[2026-10-28 12:22:56] Type: Encryption | Method: AES | File: ease_personal | Size: 307 bytes | Time: 0.004498s
+[2026-10-28 12:23:13] Type: Encryption | Method: RC4 | File: ease_academic | Size: 273 bytes | Time: 0.000868s
+[2026-10-28 12:23:13] Type: Encryption | Method: AES | File: ease_academic | Size: 273 bytes | Time: 0.005020s
+[2026-10-28 12:23:13] Type: Encryption | Method: DES | File: ease_academic | Size: 273 bytes | Time: 0.004636s
+[2026-10-28 12:23:51] Type: Encryption | Method: RC4 | File: ease_parent | Size: 283 bytes | Time: 0.000533s
+[2026-10-28 12:23:51] Type: Encryption | Method: AES | File: ease_parent | Size: 283 bytes | Time: 0.004702s
+[2026-10-28 12:23:51] Type: Encryption | Method: DES | File: ease_parent | Size: 283 bytes | Time: 0.004526s
+[2026-10-28 12:31:55] Type: Decryption | Method: AES | File: ease_personal | Size: 307 bytes | Time: 0.004450s
+[2026-10-28 12:31:55] Type: Decryption | Method: AES | File: ease_academic | Size: 273 bytes | Time: 0.000092s
+[2026-10-28 12:31:55] Type: Decryption | Method: AES | File: ease_parent | Size: 283 bytes | Time: 0.000054s
+[2026-10-28 12:32:25] Type: Encryption | Method: RC4 | File: ease:Screenshot 2026-02-20 210511.png | Size: 1005583 bytes | Time: 0.003303s
+[2026-10-28 12:32:25] Type: Encryption | Method: AES | File: ease:Screenshot 2026-02-20 210511.png | Size: 1005583 bytes | Time: 0.004481s
+[2026-10-28 12:32:25] Type: Encryption | Method: DES | File: ease:Screenshot 2026-02-20 210511.png | Size: 1005583 bytes | Time: 0.023293s
+[2026-10-28 12:32:25] Type: Encryption | Method: RC4 | File: ease:Assignment 3 Protege - Knowledge Based Engineering.pdf | Size: 379833 bytes | Time: 0.001041s
+[2026-10-28 12:32:25] Type: Encryption | Method: AES | File: ease:Assignment 3 Protege - Knowledge Based Engineering.pdf | Size: 379833 bytes | Time: 0.004071s
+[2026-10-28 12:32:25] Type: Encryption | Method: DES | File: ease:Assignment 3 Protege - Knowledge Based Engineering.pdf | Size: 379833 bytes | Time: 0.011065s
+[2026-10-28 12:32:25] Type: Encryption | Method: RC4 | File: ease:Noun Analysis.pdf | Size: 40856 bytes | Time: 0.000598s
+[2026-10-28 12:32:25] Type: Encryption | Method: AES | File: ease:Noun Analysis.pdf | Size: 40856 bytes | Time: 0.004093s
+[2026-10-28 12:32:25] Type: Encryption | Method: DES | File: ease:Noun Analysis.pdf | Size: 40856 bytes | Time: 0.004643s
+[2026-10-28 12:32:25] Type: Encryption | Method: RC4 | File: ease:person duka.mp4 | Size: 246758 bytes | Time: 0.000877s
+[2026-10-28 12:32:25] Type: Encryption | Method: AES | File: ease:person duka.mp4 | Size: 246758 bytes | Time: 0.004095s
+[2026-10-28 12:32:25] Type: Encryption | Method: DES | File: ease:person duka.mp4 | Size: 246758 bytes | Time: 0.009294s
+[2026-10-28 12:32:25] Type: Encryption | Method: RC4 | File: ease_documents | Size: 414 bytes | Time: 0.000553s
+[2026-10-28 12:32:25] Type: Encryption | Method: AES | File: ease_documents | Size: 414 bytes | Time: 0.004355s
+[2026-10-28 12:32:25] Type: Encryption | Method: DES | File: ease_documents | Size: 414 bytes | Time: 0.004156s
+[2026-10-28 12:32:34] Type: Decryption | Method: AES | File: ease:Screenshot 2026-02-20 210511.png | Size: 1005583 bytes | Time: 0.003956s
+[2026-10-28 12:32:37] Type: Decryption | Method: AES | File: ease:person duka.mp4 | Size: 246758 bytes | Time: 0.003621s
+[2026-10-28 12:32:54] Type: Decryption | Method: AES | File: ease_password | Size: 4 bytes | Time: 0.003226s
+[2026-10-28 12:32:54] Type: Decryption | Method: AES | File: ease_personal | Size: 307 bytes | Time: 0.003127s
+[2026-10-28 12:32:54] Type: Decryption | Method: AES | File: ease_academic | Size: 273 bytes | Time: 0.000051s
+[2026-10-28 12:32:54] Type: Decryption | Method: AES | File: ease_parent | Size: 283 bytes | Time: 0.000038s
+[2026-10-28 12:32:54] Type: Decryption | Method: AES | File: ease_documents | Size: 414 bytes | Time: 0.000036s
+[2026-10-28 12:32:57] Type: Decryption | Method: AES | File: ease:person duka.mp4 | Size: 246758 bytes | Time: 0.003517s

@@ -1,5 +1,11 @@
 {
+  "name": "ki_assignment_one",
+  "version": "1.0.0",
+  "type": "module",
   "dependencies": {
     "busboy": "^1.6.0"
-  }
+  },
+  "pythonDependencies": [
+    "pycryptodome"
+  ]
 }
