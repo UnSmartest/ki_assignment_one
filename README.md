@@ -51,3 +51,8 @@ or
 content-type is usually either "text/html" or "application/json" <br>
 .pipe(res) returns what fs reads <br>
 (fs is the file manager from NodeJS that doesn't exist in Web JavaScript, which is why we need server.js) <br>
+
+AI Disclosure:
+- https://claude.ai/share/d3b6786c-e4a9-4f5e-b205-150546b3352b 
+- https://share.gemini.google/SmldziHxr63A
+- https://chatgpt.com/share/6adf29bf-271c-83ec-a221-20f474b0bcd9
