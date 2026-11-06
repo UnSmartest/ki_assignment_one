@@ -355,3 +355,32 @@
 [2026-10-28 12:50:50] Type: Decryption | Method: AES | File: admin_parent | Size: 268 bytes | Time: 0.000046s
 [2026-10-28 12:50:50] Type: Decryption | Method: AES | File: admin_documents | Size: 351 bytes | Time: 0.000027s
 [2026-10-28 12:50:53] Type: Decryption | Method: AES | File: admin:bottle.mp4 | Size: 230634 bytes | Time: 0.003431s
+[2026-11-06 13:48:16] Type: Encryption | Method: AES | File: 5025241166_password | Size: 10 bytes | Time: 0.003709s
+[2026-11-06 13:53:31] Type: Encryption | Method: RC4 | File: 5025241166_personal | Size: 374 bytes | Time: 0.001156s
+[2026-11-06 13:53:31] Type: Encryption | Method: AES | File: 5025241166_personal | Size: 374 bytes | Time: 0.015787s
+[2026-11-06 13:53:31] Type: Encryption | Method: DES | File: 5025241166_personal | Size: 374 bytes | Time: 0.014247s
+[2026-11-06 13:53:56] Type: Encryption | Method: RC4 | File: 5025241166_academic | Size: 264 bytes | Time: 0.000196s
+[2026-11-06 13:53:56] Type: Encryption | Method: AES | File: 5025241166_academic | Size: 264 bytes | Time: 0.007043s
+[2026-11-06 13:53:56] Type: Encryption | Method: DES | File: 5025241166_academic | Size: 264 bytes | Time: 0.005380s
+[2026-11-06 13:56:45] Type: Encryption | Method: AES | File: 5025241166_parent | Size: 319 bytes | Time: 0.004002s
+[2026-11-06 13:56:45] Type: Encryption | Method: RC4 | File: 5025241166_parent | Size: 319 bytes | Time: 0.000158s
+[2026-11-06 13:58:03] Type: Encryption | Method: RC4 | File: 5025241166:KTP Krisna Widhi Wijaya.jpeg | Size: 209908 bytes | Time: 0.000866s
+[2026-11-06 13:58:03] Type: Encryption | Method: AES | File: 5025241166:KTP Krisna Widhi Wijaya.jpeg | Size: 209908 bytes | Time: 0.007074s
+[2026-11-06 13:58:03] Type: Encryption | Method: DES | File: 5025241166:KTP Krisna Widhi Wijaya.jpeg | Size: 209908 bytes | Time: 0.012862s
+[2026-11-06 13:58:03] Type: Encryption | Method: AES | File: 5025241166:[SCANNED] KRISNA WIDHI - IJAZAH SMA.pdf | Size: 818515 bytes | Time: 0.013027s
+[2026-11-06 13:58:03] Type: Encryption | Method: RC4 | File: 5025241166:[SCANNED] KRISNA WIDHI - IJAZAH SMA.pdf | Size: 818515 bytes | Time: 0.006087s
+[2026-11-06 13:58:03] Type: Encryption | Method: DES | File: 5025241166:[SCANNED] KRISNA WIDHI - IJAZAH SMA.pdf | Size: 818515 bytes | Time: 0.068155s
+[2026-11-06 13:58:03] Type: Encryption | Method: RC4 | File: 5025241166:Cleric Tiefling.docx | Size: 246828 bytes | Time: 0.001694s
+[2026-11-06 13:58:03] Type: Encryption | Method: AES | File: 5025241166:Cleric Tiefling.docx | Size: 246828 bytes | Time: 0.007950s
+[2026-11-06 13:58:03] Type: Encryption | Method: DES | File: 5025241166:Cleric Tiefling.docx | Size: 246828 bytes | Time: 0.026511s
+[2026-11-06 13:58:03] Type: Encryption | Method: AES | File: 5025241166:I_Thought_The_Capital_of_Israel_is_Jerusalem.mp4 | Size: 2471718 bytes | Time: 0.007571s
+[2026-11-06 13:58:03] Type: Encryption | Method: RC4 | File: 5025241166:I_Thought_The_Capital_of_Israel_is_Jerusalem.mp4 | Size: 2471718 bytes | Time: 0.009790s
+[2026-11-06 13:58:03] Type: Encryption | Method: DES | File: 5025241166:I_Thought_The_Capital_of_Israel_is_Jerusalem.mp4 | Size: 2471718 bytes | Time: 0.115181s
+[2026-11-06 13:58:04] Type: Encryption | Method: RC4 | File: 5025241166_documents | Size: 431 bytes | Time: 0.000215s
+[2026-11-06 13:58:04] Type: Encryption | Method: AES | File: 5025241166_documents | Size: 431 bytes | Time: 0.008085s
+[2026-11-06 13:58:04] Type: Encryption | Method: DES | File: 5025241166_documents | Size: 431 bytes | Time: 0.002834s
+[2026-11-06 13:58:11] Type: Decryption | Method: AES | File: 5025241166:I_Thought_The_Capital_of_Israel_is_Jerusalem.mp4 | Size: 2471718 bytes | Time: 0.014436s
+[2026-11-06 13:58:17] Type: Decryption | Method: AES | File: 5025241166:I_Thought_The_Capital_of_Israel_is_Jerusalem.mp4 | Size: 2471718 bytes | Time: 0.013707s
+[2026-11-06 13:59:38] Type: Decryption | Method: AES | File: 5025241166:KTP Krisna Widhi Wijaya.jpeg | Size: 209908 bytes | Time: 0.003365s
+[2026-11-06 13:59:52] Type: Decryption | Method: AES | File: 5025241166:[SCANNED] KRISNA WIDHI - IJAZAH SMA.pdf | Size: 818515 bytes | Time: 0.003642s
+[2026-11-06 13:59:59] Type: Decryption | Method: AES | File: 5025241166:I_Thought_The_Capital_of_Israel_is_Jerusalem.mp4 | Size: 2471718 bytes | Time: 0.006094s

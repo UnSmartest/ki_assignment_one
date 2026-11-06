@@ -3,38 +3,38 @@ CRYPTO STATISTICS (Average Speed & Performance)
 Mode: CTR (AES/DES) | RC4 (Stream Cipher)
 ============================================================
 
-Last Updated: 2026-10-28 12:50:53
+Last Updated: 2026-11-06 13:59:59
 
 Algorithm Type: Encryption
 Method: AES
-  Number of operations: 96
-  Total time: 2.415391s
-  Average time: 0.025160s (25.160ms)
+  Number of operations: 105
+  Total time: 2.489639s
+  Average time: 0.023711s (23.711ms)
   Fastest: 0.002226s
   Slowest: 0.662999s
 
 Algorithm Type: Encryption
 Method: DES
-  Number of operations: 92
-  Total time: 2.112665s
-  Average time: 0.022964s (22.964ms)
+  Number of operations: 99
+  Total time: 2.357835s
+  Average time: 0.023817s (23.817ms)
   Fastest: 0.000572s
   Slowest: 0.663486s
 
 Algorithm Type: Encryption
 Method: RC4
-  Number of operations: 91
-  Total time: 0.153476s
-  Average time: 0.001687s (1.687ms)
+  Number of operations: 99
+  Total time: 0.173638s
+  Average time: 0.001754s (1.754ms)
   Fastest: 0.000064s
-  Slowest: 0.008936s
+  Slowest: 0.009790s
 
 Algorithm Type: Decryption
 Method: AES
-  Number of operations: 78
-  Total time: 0.160507s
-  Average time: 0.002058s (2.058ms)
+  Number of operations: 83
+  Total time: 0.201751s
+  Average time: 0.002431s (2.431ms)
   Fastest: 0.000026s
-  Slowest: 0.007114s
+  Slowest: 0.014436s
 
 ============================================================

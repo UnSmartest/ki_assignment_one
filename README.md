@@ -56,3 +56,6 @@ content-type is usually either "text/html" or "application/json" <br>
 - https://claude.ai/share/d3b6786c-e4a9-4f5e-b205-150546b3352b 
 - https://share.gemini.google/SmldziHxr63A
 - https://chatgpt.com/share/6adf29bf-271c-83ec-a221-20f474b0bcd9
+
+# "Invalid Request"
+In case when you sign up, it returns a "Invalid request", you might want to check if the Crypto library is installed. If not, just do `pip install pycryptodome`.
