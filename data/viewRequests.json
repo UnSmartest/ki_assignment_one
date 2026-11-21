@@ -1,0 +1,16 @@
+{
+  "requests": [
+    {
+      "id": "797a7402-2b7b-4e98-94c0-11702b21b9c0",
+      "requester": "5025241166",
+      "recipient": "krisna",
+      "status": "accepted"
+    },
+    {
+      "id": "2327f0b5-0dce-4bd9-ac92-ecaaa2dda570",
+      "requester": "krisna",
+      "recipient": "5025241166",
+      "status": "pending"
+    }
+  ]
+}

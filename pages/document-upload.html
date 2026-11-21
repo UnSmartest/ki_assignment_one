@@ -61,6 +61,150 @@
         background-color: #f44336;
         color: white;
       }
+
+      /* view other users stuff */
+      .user-list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 15px;
+      }
+
+      .user-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 12px 15px;
+          background-color: #f5f5f5;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+      }
+
+      .username {
+          font-size: 16px;
+          font-weight: bold;
+      }
+
+      .request-btn {
+          padding: 8px 14px;
+          background-color: #2196F3;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+
+      .request-btn:hover {
+          background-color: #1976D2;
+      }
+
+      /* view request stuff */
+
+      .view-request-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 15px;
+      }
+
+      .view-request-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        gap: 15px;
+      }
+
+      .view-request-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .view-request-username {
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .view-request-description {
+        color: #666;
+        font-size: 13px;
+      }
+
+      .view-request-actions {
+        display: flex;
+        gap: 8px;
+      }
+
+      .accept-btn, .deny-btn, .copy-key-btn {
+        padding: 8px 14px;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .accept-btn {
+        background-color: #4CAF50;
+      }
+
+      .accept-btn:hover {
+        background-color: #388E3C;
+      }
+
+      .deny-btn {
+        background-color: #f44336;
+      }
+
+      .deny-btn:hover {
+        background-color: #d32f2f;
+      }
+
+      .copy-key-btn {
+        background-color: #2196F3;
+      }
+
+      .copy-key-btn:hover {
+        background-color: #1976D2;
+      }
+
+      .empty-requests {
+        color: #777;
+        margin-top: 15px;
+      }
+
+      .view-request-accepted {
+        color: #388E3C;
+        font-weight: bold;
+      }
+
+      .encrypted-key-section {
+        margin-top: 10px;
+        padding: 12px;
+        background-color: #e8f5e9;
+        border-radius: 5px;
+      }
+
+      .encrypted-key-text {
+        overflow-wrap: anywhere;
+        font-family: monospace;
+        margin: 8px 0;
+      }
+
+      @media (max-width: 600px) {
+        .request-item {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .view-request-actions {
+          width: 100%;
+        }
+      }
+
       /* EXPERIMENT */
       #document.docs-locked .delete-btn {
         display: none;
@@ -104,6 +248,8 @@
         <button type="button" class="tab-btn" data-tab="Academic">Academic</button>
         <button type="button" class="tab-btn" data-tab="Parent-info">Parent Info</button>
         <button type="button" class="tab-btn" data-tab="document">Documents</button>
+        <button type="button" class="tab-btn" data-tab="view-other-users">View Other Users</button>
+        <button type="button" class="tab-btn" data-tab="view-requests">View Requests</button>
       </div>
       
       <div id="form">
@@ -349,6 +495,30 @@
             <button type="button" class="save-btn" id="save-documents">Save</button>
           </div>
         </div>
+
+        <!-- View Other Users section -->
+         <div class="tab-content" id="view-other-users">
+          <!-- Bla bla bla -->
+          <div class="section-header">
+            <h2>View Other Users</h2>
+          </div>
+          
+          <div id="other-users-list">
+            <p>work in progress</p>
+          </div>
+         </div>
+
+        <!-- View Requests -->
+         <div class="tab-content" id="view-requests">
+          <!-- Bla bla bla -->
+          <div class="section-header">
+            <h2>View Requests</h2>
+          </div>
+          
+          <div id="incoming-requests">
+            <p class="empty-requests">No incoming view request yet.</p>
+          </div>
+         </div>
       </div>
     </div>
 
@@ -360,6 +530,7 @@
     </div>
 
     <script>
+      
       const activeUser = sessionStorage.getItem("activeUser");
       if (!activeUser) {
         alert("Please login first");
@@ -374,6 +545,9 @@
           tabContents.forEach((c) => c.classList.remove("active"));
           btn.classList.add("active");
           document.getElementById(btn.dataset.tab).classList.add("active");
+
+          if(btn.dataset.tab === "view-other-users") loadOtherUsers();
+          if(btn.dataset.tab === "view-requests") loadViewRequests();
         });
       });
 
@@ -381,7 +555,9 @@
         personal: { saved: false, edit: false },
         academic: { saved: false, edit: false },
         parent: { saved: false, edit: false },
-        documents: { saved: false, edit: false }
+        documents: { saved: false, edit: false },
+        viewOtherUsers: { saved: false, edit: false },
+        viewRequests: { saved: false, edit: false }
       };
 
       const uploadedNames = {};
@@ -415,6 +591,216 @@
         if (saveBtn) saveBtn.style.display = locked ? 'none' : 'inline-block';
         if (editBtn) editBtn.style.display = locked ? 'inline-block' : 'none';
       }
+
+      // for the view other users (display all the users + request view button)
+      async function loadOtherUsers() {
+          const container = document.getElementById('other-users-list');
+
+          try {
+              const response = await fetch('/users');
+              const data = await response.json();
+
+              if (!response.ok) {
+                throw new Error(data.error || 'Failed to retrieve users');
+              }
+
+              // Exclude the currently logged-in user
+              const otherUsers = data.users.filter(
+                  user => user.usernameText !== activeUser
+              );
+
+              container.innerHTML = '';
+
+              if (otherUsers.length === 0) {
+                  container.textContent = 'No other users registered.';
+                  return;
+              }
+
+              const userList = document.createElement('div');
+              userList.className = 'user-list';
+
+              otherUsers.forEach(user => {
+                  const userItem = document.createElement('div');
+                  userItem.className = 'user-item';
+
+                  const username = document.createElement('span');
+                  username.className = 'username';
+                  username.textContent = user.usernameText;
+
+                  const requestBtn = document.createElement('button');
+                  requestBtn.type = 'button';
+                  requestBtn.className = 'request-btn';
+                  requestBtn.textContent = 'Request View';
+
+                  requestBtn.addEventListener('click', async () => {
+                      try{
+                        const response = await fetch('/view-requests', {
+                          method: 'POST',
+                          headers: {
+                            'Content-Type':'application/json'
+                          },
+                          body: JSON.stringify({
+                            requester: activeUser,
+                            recipient: user.usernameText
+                          })
+                        });
+
+                        const data = await response.json();
+
+                        if(!response.ok){
+                          alert(data.error);
+                          return;
+                        }
+
+                        alert(`View request sent to ${user.usernameText}!`);
+                        requestBtn.disabled = true;
+                        requestBtn.textContent = 'Request sent';
+                      } catch(error) {
+                        console.error('Unsuccessful request:', error);
+                        alert("Failed to send view request");
+                      }
+                  });
+
+                  userItem.append(username, requestBtn);
+                  userList.appendChild(userItem);
+              });
+
+              container.appendChild(userList);
+
+          } catch (error) {
+              console.error('Failed to load other users:', error);
+              container.textContent = 'Failed to load users.';
+          }
+      }
+
+      // View Request page
+      let viewRequests = []; //in form of {username, status}
+      
+      async function loadViewRequests(){
+        const container = document.getElementById("incoming-requests");
+        try{
+          const response = await fetch(
+            `/view-requests?recipient=${encodeURIComponent(activeUser)}`
+          );
+
+          const data = await response.json();
+          if(!response.ok){
+            throw new Error(data.error || "Failed to load requests");
+          }
+
+          viewRequests = data.requests;
+          displayRequests();
+        } catch (error) {
+          console.error("Error loading requests:", error);
+          container.innerHTML = "<p>Can't load view requests.</p>";
+        }
+      }
+
+      function displayRequests() {
+          const container = document.getElementById("incoming-requests");
+          container.innerHTML = "";
+
+          if (viewRequests.length === 0) {
+              container.innerHTML =
+                  '<p class="empty-requests">No incoming view request yet.</p>';
+              return;
+          }
+
+          viewRequests.forEach((request, index) => {
+              const requestElement = document.createElement("div");
+              requestElement.className = "view-request-item";
+
+              requestElement.innerHTML = `
+                  <div class="view-request-info">
+                      <span class="view-request-username">${request.requester}</span>
+                      <span class="view-request-description">
+                          wants to view your documents.
+                      </span>
+                  </div>
+
+                  <div class="view-request-actions">
+                      ${
+                          request.status === "pending"
+                          ? `
+                              <button class="accept-btn"
+                                  onclick="acceptRequest(${index})">
+                                  Accept
+                              </button>
+                              <button class="deny-btn"
+                                  onclick="denyRequest(${index})">
+                                  Deny
+                              </button>
+                          `
+                          : `
+                              <span class="view-request-accepted">
+                                  Accepted
+                              </span>
+                          `
+                      }
+                  </div>
+              `;
+
+              container.appendChild(requestElement);
+          });
+      }
+
+      async function acceptRequest(index){
+        const request = viewRequests[index];
+        try{
+          const response = await fetch("/accept-view-request", {
+            method: "POST",
+            headers: {
+              "Content-Type":"application/json"
+            },
+            body: JSON.stringify({
+              requestID: request.id,
+              recipient: activeUser
+            })
+          });
+
+          const data = await response.json();
+          if(!response.ok){
+            alert(data.error);
+            return;
+          }
+          alert("Request accepted");
+          await loadViewRequests();
+        } catch (error) {
+          console.error("Failed to accept request:", error);
+          alert("failed to accept request");
+        }
+      }
+
+      async function denyRequest(index){ //pop user
+        const request = viewRequests[index];
+        try {
+          const response = await fetch("/deny-view-request", {
+            method:"POST",
+            headers:{
+              "Content-Type":"application/json"
+            },
+            body: JSON.stringify({
+              requestID: request.id,
+              recipient: activeUser
+            })
+          });
+          
+          const data = await response.json();
+
+          if(!response.ok){
+            alert(data.error);
+            return;
+          }
+
+          alert("Request denied");
+          await loadViewRequests();
+        } catch (error) {
+          console.error("Failed to deny request: ", error);
+          alert("Failed to deny request");
+        }
+      }
+
+      displayRequests();
 
       // Personal Info
       document.getElementById('save-personal').addEventListener('click', async () => {
