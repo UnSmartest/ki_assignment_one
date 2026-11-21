@@ -1,10 +1,12 @@
-import http from "node:http";
-import fs from "node:fs";
+import http, { request } from "node:http";
+import fs, { write } from "node:fs";
 import path from "node:path"; 
 import Busboy from "busboy";
 import { spawn, spawnSync } from "node:child_process";
+import { randomUUID } from "node:crypto";
 
 const userDbPath = "./data/userDB.json";
+const viewRequestsPath = "./data/viewRequests.json";
 
 const signUpPath = "./pages/sign-up.html";
 const testPath = "./pages/test.html";
@@ -26,6 +28,12 @@ if (!fs.existsSync("./encrypted")) {
 }
 if (!fs.existsSync(userDbPath)) {
     fs.writeFileSync(userDbPath, JSON.stringify({users: []}, null, 2));
+}
+if (!fs.existsSync(viewRequestsPath)){
+    fs.writeFileSync(
+        viewRequestsPath,
+        JSON.stringify({ requests: [] }, null, 2)
+    );
 }
 
 function readJson(file) {
@@ -117,6 +125,196 @@ const server = http.createServer((req, res) => {
         const names = (readJson(userDbPath).users || []).map(u => ({ usernameText: u.usernameText }));
         res.writeHead(200, {"Content-Type": "application/json"});
         res.end(JSON.stringify({ users: names }));
+        return;
+    }
+    if(req.method === "POST" && req.url === "/view-requests"){ //add into viewRequests.json
+        let body = "";
+        req.on("data",chunk =>{
+            body += chunk.toString();
+        });
+        req.on("end", () => {
+            try {
+                const payload = JSON.parse(body);
+                const requester = payload.requester;
+                const recipient = payload.recipient;
+
+                if( !requester || !recipient || !USERNAME_RE.test(requester) || !USERNAME_RE.test(recipient)){
+                    res.writeHead(400, {"Content-Type":"application/json"});
+                    res.end(JSON.stringify({error:"Invalid usernames"}));
+                    return;
+                }
+
+                if(requester === recipient){
+                    res.writeHead(400, {"Content-Type":"application/json"});
+                    res.end(JSON.stringify({error:"how did u request ur own documents"}));
+                    return;
+                }
+
+                const userDB = readJson(userDbPath);
+                if(!hasUser(userDB, requester) || !hasUser(userDB, recipient)){
+                    res.writeHead(404, {"Content-Type":"application/json"});
+                    res.end(JSON.stringify({error:"User not found"}));
+                    return;
+                }
+
+                const requestDB = readJson(viewRequestsPath);
+                if(!Array.isArray(requestDB.requests)){
+                    requestDB.requests = [];
+                }
+
+                const alreadyRequested = requestDB.requests.some(request =>
+                    request.requester === requester &&
+                    request.recipient === recipient &&
+                    request.status === "pending"
+                );
+
+                if(alreadyRequested){
+                    res.writeHead(409, {"Content-Type":"application/json"});
+                    res.end(JSON.stringify({error:"Request already exist"}));
+                    return;
+                }
+
+                const newRequest = {
+                    id: randomUUID(),
+                    requester,
+                    recipient,
+                    status:"pending"
+                };
+
+                requestDB.requests.push(newRequest);
+                writeJson(viewRequestsPath, requestDB);
+
+                res.writeHead(201, {"Content-Type":"application/json"});
+                res.end(JSON.stringify({
+                    success: true,
+                    request: newRequest
+                }));
+            } catch (error) {
+                res.writeHead(400, {"Content-Type":"application/json"});
+                res.end(JSON.stringify({error:"Invalid request body"}));
+            }
+        });
+        return;
+    }
+    if (req.method === "GET" && req.url.startsWith("/view-requests")){ //read from viewRequests.json
+        const url = new URL(req.url, "http://localhost");
+        const recipient = url.searchParams.get("recipient");
+        if(!recipient || !USERNAME_RE.test(recipient)){
+            res.writeHead(400, {"Content-Type":"application/json"});
+            res.end(JSON.stringify({error:"Invalid recipient"}));
+            return;
+        }
+
+        const userDB = readJson(userDbPath);
+        if(!hasUser(userDB, recipient)){
+            res.writeHead(404, {"Content-Type":"application/json"});
+            res.end(JSON.stringify({error:"User not found"}));
+            return;
+        }
+
+        const requestDB = readJson(viewRequestsPath);
+        const incomingRequests = (requestDB.requests || []).filter(request => request.recipient === recipient);
+
+        res.writeHead(200, {"Content-Type":"application/json"});
+        res.end(JSON.stringify({requests:incomingRequests}));
+        return;
+    }
+    if(req.method === "POST" && req.url === "/accept-view-request"){ //change req status to accepted
+        let body = "";
+
+        req.on("data", chunk => {
+            body += chunk.toString();
+        });
+
+        req.on("end", () => {
+            try{
+                const payload = JSON.parse(body);
+                const {requestID, recipient} = payload;
+
+                if(!requestID || !recipient || !USERNAME_RE.test(recipient)){
+                    res.writeHead(400, {"Content-Type": "application/json"});
+                    res.end(JSON.stringify({error:"Invalid erquest data"}));
+                    return;
+                }
+
+                const requestDB = readJson(viewRequestsPath);
+                const request = requestDB.requests.find(
+                    item => item.id === requestID && item.recipient === recipient
+                );
+
+                if(!request){
+                    res.writeHead(404, {"Content-Type":"application/json"});
+                    res.end(JSON.stringify({error:"Request not foudn"}));
+                    return;
+                }
+
+                if(request.status !== "pending"){
+                    res.writeHead(409, {"Content-Type":"application/json"});
+                    res.end(JSON.stringify({error:"Request is no longer pending"}));
+                    return;
+                }
+
+                request.status = "accepted";
+                writeJson(viewRequestsPath, requestDB);
+
+                res.writeHead(200, {"Content-Type":"application/json"});
+                res.end(JSON.stringify({
+                    success: true,
+                    message: "Request accepted"
+                }));
+            } catch (error) {
+                console.error(error);
+                res.writeHead(400, {"Content-Type":"application/json"});
+                res.end(JSON.stringify({error:"Invalid request body"}));
+            }
+        });
+        return;
+    }
+    if(req.method === "POST" && req.url === '/deny-view-request'){ // view request denied
+        let body = "";
+        req.on("data", chunk => {
+            body += chunk.toString();
+        });
+        req.on("end", () => {
+            try{
+                const payload = JSON.parse(body);
+                const { requestID, recipient } = payload;
+                if(!requestID || !recipient || !USERNAME_RE.test(recipient)){
+                    res.writeHead(400, {"Content-Type": "application/json"});
+                    res.end(JSON.stringify({error:"Invalid request data"}));
+                    return;
+                }
+                const requestDB = readJson(viewRequestsPath);
+                const requestIndex = requestDB.requests.findIndex(
+                    item => item.id === requestID && item.recipient === recipient
+                );
+
+                if(requestIndex === -1){
+                    res.writeHead(404, {"Content-Type":"application/json"});
+                    res.end(JSON.stringify({error:"Request not found"}));
+                    return;
+                }
+
+                if(requestDB.requests[requestIndex].status !== "pending"){
+                    res.writeHead(409, {"Content-Type":"application/json"});
+                    res.end(JSON.stringify({error:"Request is no longer pending"}));
+                    return;
+                }
+
+                requestDB.requests.splice(requestIndex, 1);
+                writeJson(viewRequestsPath, requestDB);
+
+                res.writeHead(200, {"Content-Type":"application/json"});
+                res.end(JSON.stringify({
+                    success: true,
+                    message:"Request denied"
+                }));
+            } catch (error) {
+                console.error(error);
+                res.writeHead(400, {"Content-Type":"application/json"});
+                res.end(JSON.stringify({error:"Invalid request body"}));
+            }
+        });
         return;
     }
 
@@ -289,6 +487,8 @@ const server = http.createServer((req, res) => {
         });
         return;
     }
+
+    
 
         // Upload file with validation
     // The page sends username + field BEFORE the file, so they are known when the file arrives.
